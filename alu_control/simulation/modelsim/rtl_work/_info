@@ -1,0 +1,77 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Pichau\Desktop\ARM Sicle Cycle\alu_control - Testbench\simulation\modelsim
+Ealucontrol
+Z1 w1615566320
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\Pichau\Desktop\ARM Sicle Cycle\alu_control - Testbench\simulation\modelsim
+Z6 8C:/Users/Pichau/Desktop/ARM Sicle Cycle/alu_control - Testbench/ALUcontrol.vhd
+Z7 FC:/Users/Pichau/Desktop/ARM Sicle Cycle/alu_control - Testbench/ALUcontrol.vhd
+l0
+L10
+VLc>`HX?P<To]O5]W]k?]W3
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1615592279.391000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pichau/Desktop/ARM Sicle Cycle/alu_control - Testbench/ALUcontrol.vhd|
+Z11 !s107 C:/Users/Pichau/Desktop/ARM Sicle Cycle/alu_control - Testbench/ALUcontrol.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 bT;Fg]4DS<T=:_56g]MDQ0
+!i10b 1
+Abehavior
+R2
+R3
+R4
+DEx4 work 10 alucontrol 0 22 Lc>`HX?P<To]O5]W]k?]W3
+l22
+L21
+Vl`H`hXW`G;5h@:EeR;6PW3
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 @nKF:Q]Tl5Y0QYz<29<:G3
+!i10b 1
+Etb_alucontrol
+Z14 w1615569410
+R3
+R4
+R5
+Z15 8C:/Users/Pichau/Desktop/ARM Sicle Cycle/alu_control - Testbench/tb_ALUcontrol.vhd
+Z16 FC:/Users/Pichau/Desktop/ARM Sicle Cycle/alu_control - Testbench/tb_ALUcontrol.vhd
+l0
+L4
+V5dg9NU]Ieh=TaX0j=Mdi82
+!s100 C2kKd<oajKlI<5]aII:;L3
+R8
+31
+!i10b 1
+Z17 !s108 1615592279.498000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pichau/Desktop/ARM Sicle Cycle/alu_control - Testbench/tb_ALUcontrol.vhd|
+Z19 !s107 C:/Users/Pichau/Desktop/ARM Sicle Cycle/alu_control - Testbench/tb_ALUcontrol.vhd|
+R12
+R13
+Ateste
+R3
+R4
+DEx4 work 13 tb_alucontrol 0 22 5dg9NU]Ieh=TaX0j=Mdi82
+l29
+L7
+VelBHPO^>DoTHW8d14z9e:0
+!s100 ^2A9lgKzZ45UIWS]B;0oa3
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

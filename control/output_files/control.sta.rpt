@@ -1,0 +1,1657 @@
+TimeQuest Timing Analyzer report for control
+Fri Mar 12 15:22:23 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'Funct[1]'
+ 12. Slow Model Setup: 'Funct[0]'
+ 13. Slow Model Hold: 'Funct[1]'
+ 14. Slow Model Hold: 'Funct[0]'
+ 15. Slow Model Minimum Pulse Width: 'Funct[0]'
+ 16. Slow Model Minimum Pulse Width: 'Funct[1]'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'Funct[0]'
+ 27. Fast Model Setup: 'Funct[1]'
+ 28. Fast Model Hold: 'Funct[1]'
+ 29. Fast Model Hold: 'Funct[0]'
+ 30. Fast Model Minimum Pulse Width: 'Funct[0]'
+ 31. Fast Model Minimum Pulse Width: 'Funct[1]'
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Multicorner Timing Analysis Summary
+ 37. Setup Times
+ 38. Hold Times
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; control                                                           ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                               ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets      ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; Funct[0]   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Funct[0] } ;
+; Funct[1]   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Funct[1] } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+
+
++----------------------------------------------------------------------+
+; Slow Model Fmax Summary                                              ;
++-------------+-----------------+------------+-------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name ; Note                    ;
++-------------+-----------------+------------+-------------------------+
+; 934.58 MHz  ; 357.4 MHz       ; Funct[1]   ; limit due to hold check ;
+; 3184.71 MHz ; 417.36 MHz      ; Funct[0]   ; limit due to hold check ;
++-------------+-----------------+------------+-------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------+
+; Slow Model Setup Summary          ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; Funct[1] ; -0.035 ; -0.035        ;
+; Funct[0] ; 0.028  ; 0.000         ;
++----------+--------+---------------+
+
+
++-----------------------------------+
+; Slow Model Hold Summary           ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; Funct[1] ; -1.567 ; -8.921        ;
+; Funct[0] ; -1.198 ; -6.418        ;
++----------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; Funct[0] ; -1.380 ; -1.380             ;
+; Funct[1] ; -1.222 ; -1.612             ;
++----------+--------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Funct[1]'                                                                               ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; -0.035 ; Funct[1]  ; ImmSrc[0]$latch ; Funct[1]     ; Funct[1]    ; 0.500        ; 4.762      ; 4.473      ;
+; 0.376  ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[1]    ; 0.500        ; 3.189      ; 2.355      ;
+; 0.462  ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[1]    ; 0.500        ; 5.058      ; 4.238      ;
+; 0.465  ; Funct[1]  ; ImmSrc[0]$latch ; Funct[1]     ; Funct[1]    ; 1.000        ; 4.762      ; 4.473      ;
+; 0.475  ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[1]    ; 0.500        ; 5.058      ; 4.258      ;
+; 0.511  ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[1]    ; 0.500        ; 5.057      ; 4.228      ;
+; 0.558  ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[1]    ; 0.500        ; 5.154      ; 4.238      ;
+; 0.571  ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[1]    ; 0.500        ; 5.154      ; 4.258      ;
+; 0.607  ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[1]    ; 0.500        ; 5.153      ; 4.228      ;
+; 0.616  ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[1]    ; 0.500        ; 5.058      ; 4.084      ;
+; 0.662  ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[1]    ; 0.500        ; 3.475      ; 2.355      ;
+; 0.665  ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[1]    ; 0.500        ; 5.057      ; 4.074      ;
+; 0.702  ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[1]    ; 0.500        ; 5.058      ; 4.031      ;
+; 0.712  ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[1]    ; 0.500        ; 5.154      ; 4.084      ;
+; 0.761  ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[1]    ; 0.500        ; 5.153      ; 4.074      ;
+; 0.798  ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[1]    ; 0.500        ; 5.154      ; 4.031      ;
+; 0.834  ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[1]    ; 0.500        ; 5.054      ; 3.902      ;
+; 0.876  ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[1]    ; 1.000        ; 3.189      ; 2.355      ;
+; 0.930  ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[1]    ; 0.500        ; 5.150      ; 3.902      ;
+; 0.962  ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[1]    ; 1.000        ; 5.058      ; 4.238      ;
+; 0.975  ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[1]    ; 1.000        ; 5.058      ; 4.258      ;
+; 1.011  ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[1]    ; 1.000        ; 5.057      ; 4.228      ;
+; 1.015  ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[1]    ; 0.500        ; 5.057      ; 3.866      ;
+; 1.058  ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[1]    ; 1.000        ; 5.154      ; 4.238      ;
+; 1.071  ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[1]    ; 1.000        ; 5.154      ; 4.258      ;
+; 1.107  ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[1]    ; 1.000        ; 5.153      ; 4.228      ;
+; 1.111  ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[1]    ; 0.500        ; 5.153      ; 3.866      ;
+; 1.116  ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[1]    ; 1.000        ; 5.058      ; 4.084      ;
+; 1.162  ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[1]    ; 1.000        ; 3.475      ; 2.355      ;
+; 1.165  ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[1]    ; 1.000        ; 5.057      ; 4.074      ;
+; 1.202  ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[1]    ; 1.000        ; 5.058      ; 4.031      ;
+; 1.212  ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[1]    ; 1.000        ; 5.154      ; 4.084      ;
+; 1.261  ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[1]    ; 1.000        ; 5.153      ; 4.074      ;
+; 1.298  ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[1]    ; 1.000        ; 5.154      ; 4.031      ;
+; 1.334  ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[1]    ; 1.000        ; 5.054      ; 3.902      ;
+; 1.430  ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[1]    ; 1.000        ; 5.150      ; 3.902      ;
+; 1.515  ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[1]    ; 1.000        ; 5.057      ; 3.866      ;
+; 1.611  ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[1]    ; 1.000        ; 5.153      ; 3.866      ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Funct[0]'                                                                              ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; 0.028 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[0]    ; 0.500        ; 2.841      ; 2.355      ;
+; 0.189 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[0]    ; 0.500        ; 4.785      ; 4.238      ;
+; 0.202 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[0]    ; 0.500        ; 4.785      ; 4.258      ;
+; 0.238 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[0]    ; 0.500        ; 4.784      ; 4.228      ;
+; 0.343 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[0]    ; 0.500        ; 4.785      ; 4.084      ;
+; 0.392 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[0]    ; 0.500        ; 4.784      ; 4.074      ;
+; 0.429 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[0]    ; 0.500        ; 4.785      ; 4.031      ;
+; 0.469 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[0]    ; 0.500        ; 5.065      ; 4.238      ;
+; 0.482 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[0]    ; 0.500        ; 5.065      ; 4.258      ;
+; 0.518 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[0]    ; 0.500        ; 5.064      ; 4.228      ;
+; 0.528 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[0]    ; 1.000        ; 2.841      ; 2.355      ;
+; 0.561 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[0]    ; 0.500        ; 4.781      ; 3.902      ;
+; 0.572 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[0]    ; 0.500        ; 3.385      ; 2.355      ;
+; 0.623 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[0]    ; 0.500        ; 5.065      ; 4.084      ;
+; 0.672 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[0]    ; 0.500        ; 5.064      ; 4.074      ;
+; 0.689 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[0]    ; 1.000        ; 4.785      ; 4.238      ;
+; 0.702 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[0]    ; 1.000        ; 4.785      ; 4.258      ;
+; 0.709 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[0]    ; 0.500        ; 5.065      ; 4.031      ;
+; 0.738 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[0]    ; 1.000        ; 4.784      ; 4.228      ;
+; 0.742 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[0]    ; 0.500        ; 4.784      ; 3.866      ;
+; 0.841 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[0]    ; 0.500        ; 5.061      ; 3.902      ;
+; 0.843 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[0]    ; 1.000        ; 4.785      ; 4.084      ;
+; 0.892 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[0]    ; 1.000        ; 4.784      ; 4.074      ;
+; 0.929 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[0]    ; 1.000        ; 4.785      ; 4.031      ;
+; 0.969 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[0]    ; 1.000        ; 5.065      ; 4.238      ;
+; 0.982 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[0]    ; 1.000        ; 5.065      ; 4.258      ;
+; 1.018 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[0]    ; 1.000        ; 5.064      ; 4.228      ;
+; 1.022 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[0]    ; 0.500        ; 5.064      ; 3.866      ;
+; 1.061 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[0]    ; 1.000        ; 4.781      ; 3.902      ;
+; 1.072 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[0]    ; 1.000        ; 3.385      ; 2.355      ;
+; 1.123 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[0]    ; 1.000        ; 5.065      ; 4.084      ;
+; 1.172 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[0]    ; 1.000        ; 5.064      ; 4.074      ;
+; 1.209 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[0]    ; 1.000        ; 5.065      ; 4.031      ;
+; 1.242 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[0]    ; 1.000        ; 4.784      ; 3.866      ;
+; 1.341 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[0]    ; 1.000        ; 5.061      ; 3.902      ;
+; 1.522 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[0]    ; 1.000        ; 5.064      ; 3.866      ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Funct[1]'                                                                                ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; -1.567 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[1]    ; 0.000        ; 5.433      ; 3.866      ;
+; -1.528 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[1]    ; 0.000        ; 5.430      ; 3.902      ;
+; -1.403 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[1]    ; 0.000        ; 5.434      ; 4.031      ;
+; -1.399 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[1]    ; 0.000        ; 3.754      ; 2.355      ;
+; -1.376 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[1]    ; 0.000        ; 5.434      ; 4.058      ;
+; -1.359 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[1]    ; 0.000        ; 5.433      ; 4.074      ;
+; -1.287 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[1]    ; 0.000        ; 5.153      ; 3.866      ;
+; -1.254 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[1]    ; 0.000        ; 5.434      ; 4.180      ;
+; -1.248 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[1]    ; 0.000        ; 5.150      ; 3.902      ;
+; -1.205 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[1]    ; 0.000        ; 5.433      ; 4.228      ;
+; -1.196 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[1]    ; 0.000        ; 5.434      ; 4.238      ;
+; -1.123 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[1]    ; 0.000        ; 5.154      ; 4.031      ;
+; -1.120 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[1]    ; 0.000        ; 3.475      ; 2.355      ;
+; -1.096 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[1]    ; 0.000        ; 5.154      ; 4.058      ;
+; -1.079 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[1]    ; 0.000        ; 5.153      ; 4.074      ;
+; -1.067 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[1]    ; -0.500       ; 5.433      ; 3.866      ;
+; -1.028 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[1]    ; -0.500       ; 5.430      ; 3.902      ;
+; -0.974 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[1]    ; 0.000        ; 5.154      ; 4.180      ;
+; -0.925 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[1]    ; 0.000        ; 5.153      ; 4.228      ;
+; -0.916 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[1]    ; 0.000        ; 5.154      ; 4.238      ;
+; -0.903 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[1]    ; -0.500       ; 5.434      ; 4.031      ;
+; -0.899 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[1]    ; -0.500       ; 3.754      ; 2.355      ;
+; -0.876 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[1]    ; -0.500       ; 5.434      ; 4.058      ;
+; -0.859 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[1]    ; -0.500       ; 5.433      ; 4.074      ;
+; -0.787 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[1]    ; -0.500       ; 5.153      ; 3.866      ;
+; -0.754 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[1]    ; -0.500       ; 5.434      ; 4.180      ;
+; -0.748 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[1]    ; -0.500       ; 5.150      ; 3.902      ;
+; -0.705 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[1]    ; -0.500       ; 5.433      ; 4.228      ;
+; -0.696 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[1]    ; -0.500       ; 5.434      ; 4.238      ;
+; -0.623 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[1]    ; -0.500       ; 5.154      ; 4.031      ;
+; -0.620 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[1]    ; -0.500       ; 3.475      ; 2.355      ;
+; -0.596 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[1]    ; -0.500       ; 5.154      ; 4.058      ;
+; -0.579 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[1]    ; -0.500       ; 5.153      ; 4.074      ;
+; -0.474 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[1]    ; -0.500       ; 5.154      ; 4.180      ;
+; -0.425 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[1]    ; -0.500       ; 5.153      ; 4.228      ;
+; -0.416 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[1]    ; -0.500       ; 5.154      ; 4.238      ;
+; -0.289 ; Funct[1]  ; ImmSrc[0]$latch ; Funct[1]     ; Funct[1]    ; 0.000        ; 4.762      ; 4.473      ;
+; 0.211  ; Funct[1]  ; ImmSrc[0]$latch ; Funct[1]     ; Funct[1]    ; -0.500       ; 4.762      ; 4.473      ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Funct[0]'                                                                                ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; -1.198 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[0]    ; 0.000        ; 5.064      ; 3.866      ;
+; -1.159 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[0]    ; 0.000        ; 5.061      ; 3.902      ;
+; -1.150 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[0]    ; 0.000        ; 5.016      ; 3.866      ;
+; -1.111 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[0]    ; 0.000        ; 5.013      ; 3.902      ;
+; -1.034 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[0]    ; 0.000        ; 5.065      ; 4.031      ;
+; -1.030 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[0]    ; 0.000        ; 3.385      ; 2.355      ;
+; -1.007 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[0]    ; 0.000        ; 5.065      ; 4.058      ;
+; -0.990 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[0]    ; 0.000        ; 5.064      ; 4.074      ;
+; -0.986 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[0]    ; 0.000        ; 5.017      ; 4.031      ;
+; -0.959 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[0]    ; 0.000        ; 5.017      ; 4.058      ;
+; -0.942 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[0]    ; 0.000        ; 5.016      ; 4.074      ;
+; -0.885 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[0]    ; 0.000        ; 5.065      ; 4.180      ;
+; -0.837 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[0]    ; 0.000        ; 5.017      ; 4.180      ;
+; -0.836 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[0]    ; 0.000        ; 5.064      ; 4.228      ;
+; -0.827 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[0]    ; 0.000        ; 5.065      ; 4.238      ;
+; -0.788 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[0]    ; 0.000        ; 5.016      ; 4.228      ;
+; -0.779 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[0]    ; 0.000        ; 5.017      ; 4.238      ;
+; -0.751 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[0]    ; 0.000        ; 3.106      ; 2.355      ;
+; -0.698 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[0]    ; -0.500       ; 5.064      ; 3.866      ;
+; -0.659 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[0]    ; -0.500       ; 5.061      ; 3.902      ;
+; -0.650 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[0]    ; -0.500       ; 5.016      ; 3.866      ;
+; -0.611 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[0]    ; -0.500       ; 5.013      ; 3.902      ;
+; -0.534 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[0]    ; -0.500       ; 5.065      ; 4.031      ;
+; -0.530 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[0]    ; -0.500       ; 3.385      ; 2.355      ;
+; -0.507 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[0]    ; -0.500       ; 5.065      ; 4.058      ;
+; -0.490 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[0]    ; -0.500       ; 5.064      ; 4.074      ;
+; -0.486 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[0]    ; -0.500       ; 5.017      ; 4.031      ;
+; -0.459 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[0]    ; -0.500       ; 5.017      ; 4.058      ;
+; -0.442 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[0]    ; -0.500       ; 5.016      ; 4.074      ;
+; -0.385 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[0]    ; -0.500       ; 5.065      ; 4.180      ;
+; -0.337 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[0]    ; -0.500       ; 5.017      ; 4.180      ;
+; -0.336 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[0]    ; -0.500       ; 5.064      ; 4.228      ;
+; -0.327 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[0]    ; -0.500       ; 5.065      ; 4.238      ;
+; -0.288 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[0]    ; -0.500       ; 5.016      ; 4.228      ;
+; -0.279 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[0]    ; -0.500       ; 5.017      ; 4.238      ;
+; -0.251 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[0]    ; -0.500       ; 3.106      ; 2.355      ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Funct[0]'                                                                  ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                  ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; Funct[0] ; Rise       ; Funct[0]                ;
+; 0.235  ; 0.235        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux7~10|combout         ;
+; 0.235  ; 0.235        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux7~10|combout         ;
+; 0.235  ; 0.235        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; RegSrc[1]$latch         ;
+; 0.235  ; 0.235        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; RegSrc[1]$latch         ;
+; 0.235  ; 0.235        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; RegSrc[1]$latch|datac   ;
+; 0.235  ; 0.235        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; RegSrc[1]$latch|datac   ;
+; 0.268  ; 0.268        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; ALUScr$latch            ;
+; 0.268  ; 0.268        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; ALUScr$latch            ;
+; 0.268  ; 0.268        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; ALUScr$latch|datad      ;
+; 0.268  ; 0.268        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; ALUScr$latch|datad      ;
+; 0.268  ; 0.268        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; ALUop$latch             ;
+; 0.268  ; 0.268        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; ALUop$latch             ;
+; 0.268  ; 0.268        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; ALUop$latch|datad       ;
+; 0.268  ; 0.268        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; ALUop$latch|datad       ;
+; 0.268  ; 0.268        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Branch$latch            ;
+; 0.268  ; 0.268        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Branch$latch            ;
+; 0.268  ; 0.268        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Branch$latch|datad      ;
+; 0.268  ; 0.268        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Branch$latch|datad      ;
+; 0.268  ; 0.268        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; MemtoReg$latch          ;
+; 0.268  ; 0.268        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; MemtoReg$latch          ;
+; 0.268  ; 0.268        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; MemtoReg$latch|datad    ;
+; 0.268  ; 0.268        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; MemtoReg$latch|datad    ;
+; 0.268  ; 0.268        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Memw$latch              ;
+; 0.268  ; 0.268        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Memw$latch              ;
+; 0.268  ; 0.268        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Memw$latch|datad        ;
+; 0.268  ; 0.268        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Memw$latch|datad        ;
+; 0.268  ; 0.268        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux24~1clkctrl|inclk[0] ;
+; 0.268  ; 0.268        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux24~1clkctrl|inclk[0] ;
+; 0.268  ; 0.268        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux24~1clkctrl|outclk   ;
+; 0.268  ; 0.268        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux24~1clkctrl|outclk   ;
+; 0.268  ; 0.268        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux24~1|combout         ;
+; 0.268  ; 0.268        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux24~1|combout         ;
+; 0.268  ; 0.268        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; RegW$latch              ;
+; 0.268  ; 0.268        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; RegW$latch              ;
+; 0.268  ; 0.268        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; RegW$latch|datad        ;
+; 0.268  ; 0.268        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; RegW$latch|datad        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; ALUScr$latch            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; ALUScr$latch            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; ALUScr$latch|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; ALUScr$latch|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; ALUop$latch             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; ALUop$latch             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; ALUop$latch|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; ALUop$latch|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Branch$latch            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Branch$latch            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Branch$latch|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Branch$latch|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Funct[0]|combout        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Funct[0]|combout        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; MemtoReg$latch          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; MemtoReg$latch          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; MemtoReg$latch|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; MemtoReg$latch|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Memw$latch              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Memw$latch              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Memw$latch|datad        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Memw$latch|datad        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux23~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux23~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux23~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Mux23~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux24~1clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Mux24~1clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux24~1clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Mux24~1clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux24~1|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Mux24~1|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux24~1|datab           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Mux24~1|datab           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux24~1|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux24~1|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux24~1|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux24~1|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux7~10|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Mux7~10|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux7~10|datab           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Mux7~10|datab           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux7~10|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux7~10|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux7~10|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux7~10|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux7~2|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux7~2|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux7~2|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Mux7~2|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux7~4|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux7~4|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux7~4|datac            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux7~4|datac            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux7~6|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux7~6|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux7~6|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux7~6|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux7~7|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Mux7~7|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux7~7|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Mux7~7|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux7~8|combout          ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Funct[1]'                                                                  ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                  ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; Funct[1] ; Rise       ; Funct[1]                ;
+; -0.065 ; -0.065       ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux7~10|combout         ;
+; -0.065 ; -0.065       ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux7~10|combout         ;
+; -0.065 ; -0.065       ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; RegSrc[1]$latch         ;
+; -0.065 ; -0.065       ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; RegSrc[1]$latch         ;
+; -0.065 ; -0.065       ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; RegSrc[1]$latch|datac   ;
+; -0.065 ; -0.065       ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; RegSrc[1]$latch|datac   ;
+; 0.124  ; 0.124        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; ALUScr$latch            ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; ALUScr$latch            ;
+; 0.124  ; 0.124        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; ALUScr$latch|datad      ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; ALUScr$latch|datad      ;
+; 0.124  ; 0.124        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; ALUop$latch             ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; ALUop$latch             ;
+; 0.124  ; 0.124        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; ALUop$latch|datad       ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; ALUop$latch|datad       ;
+; 0.124  ; 0.124        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Branch$latch            ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Branch$latch            ;
+; 0.124  ; 0.124        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Branch$latch|datad      ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Branch$latch|datad      ;
+; 0.124  ; 0.124        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; MemtoReg$latch          ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; MemtoReg$latch          ;
+; 0.124  ; 0.124        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; MemtoReg$latch|datad    ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; MemtoReg$latch|datad    ;
+; 0.124  ; 0.124        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Memw$latch              ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Memw$latch              ;
+; 0.124  ; 0.124        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Memw$latch|datad        ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Memw$latch|datad        ;
+; 0.124  ; 0.124        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux24~1clkctrl|inclk[0] ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux24~1clkctrl|inclk[0] ;
+; 0.124  ; 0.124        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux24~1clkctrl|outclk   ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux24~1clkctrl|outclk   ;
+; 0.124  ; 0.124        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux24~1|combout         ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux24~1|combout         ;
+; 0.124  ; 0.124        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; RegW$latch              ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; RegW$latch              ;
+; 0.124  ; 0.124        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; RegW$latch|datad        ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; RegW$latch|datad        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; ALUScr$latch            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; ALUScr$latch            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; ALUScr$latch|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; ALUScr$latch|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; ALUop$latch             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; ALUop$latch             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; ALUop$latch|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; ALUop$latch|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Branch$latch            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Branch$latch            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Branch$latch|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Branch$latch|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Funct[1]|combout        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Funct[1]|combout        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; ImmSrc[0]$latch         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; ImmSrc[0]$latch         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; ImmSrc[0]$latch|datad   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; ImmSrc[0]$latch|datad   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; ImmSrc[1]$latch         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; ImmSrc[1]$latch         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; ImmSrc[1]$latch|datac   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; ImmSrc[1]$latch|datac   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; MemtoReg$latch          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; MemtoReg$latch          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; MemtoReg$latch|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; MemtoReg$latch|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Memw$latch              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Memw$latch              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Memw$latch|datad        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Memw$latch|datad        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux10~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux10~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux10~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux10~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux10~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux10~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux10~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux10~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Mux23~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Mux23~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Mux23~0|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Mux23~0|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Mux24~1clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Mux24~1clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Mux24~1clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Mux24~1clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Mux24~1|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Mux24~1|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux24~1|datab           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux24~1|datab           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux24~1|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux24~1|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Mux24~1|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Mux24~1|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Mux7~10|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Mux7~10|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux7~10|dataa           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux7~10|dataa           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux7~10|datab           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux7~10|datab           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Mux7~10|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Mux7~10|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux7~3|combout          ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Funct[*]  ; Funct[0]   ; 4.467  ; 4.467  ; Rise       ; Funct[0]        ;
+;  Funct[0] ; Funct[0]   ; 0.157  ; 0.157  ; Rise       ; Funct[0]        ;
+;  Funct[1] ; Funct[0]   ; 0.472  ; 0.472  ; Rise       ; Funct[0]        ;
+;  Funct[2] ; Funct[0]   ; 4.467  ; 4.467  ; Rise       ; Funct[0]        ;
+;  Funct[5] ; Funct[0]   ; 3.229  ; 3.229  ; Rise       ; Funct[0]        ;
+; OP[*]     ; Funct[0]   ; 3.156  ; 3.156  ; Rise       ; Funct[0]        ;
+;  OP[0]    ; Funct[0]   ; 0.829  ; 0.829  ; Rise       ; Funct[0]        ;
+;  OP[1]    ; Funct[0]   ; 3.156  ; 3.156  ; Rise       ; Funct[0]        ;
+; Funct[*]  ; Funct[0]   ; 4.013  ; 4.013  ; Fall       ; Funct[0]        ;
+;  Funct[0] ; Funct[0]   ; -0.123 ; -0.123 ; Fall       ; Funct[0]        ;
+;  Funct[1] ; Funct[0]   ; 0.031  ; 0.031  ; Fall       ; Funct[0]        ;
+;  Funct[2] ; Funct[0]   ; 4.013  ; 4.013  ; Fall       ; Funct[0]        ;
+;  Funct[5] ; Funct[0]   ; 2.949  ; 2.949  ; Fall       ; Funct[0]        ;
+; OP[*]     ; Funct[0]   ; 2.876  ; 2.876  ; Fall       ; Funct[0]        ;
+;  OP[0]    ; Funct[0]   ; 0.375  ; 0.375  ; Fall       ; Funct[0]        ;
+;  OP[1]    ; Funct[0]   ; 2.876  ; 2.876  ; Fall       ; Funct[0]        ;
+; Funct[*]  ; Funct[1]   ; 4.530  ; 4.530  ; Rise       ; Funct[1]        ;
+;  Funct[0] ; Funct[1]   ; -0.116 ; -0.116 ; Rise       ; Funct[1]        ;
+;  Funct[1] ; Funct[1]   ; 0.535  ; 0.535  ; Rise       ; Funct[1]        ;
+;  Funct[2] ; Funct[1]   ; 4.530  ; 4.530  ; Rise       ; Funct[1]        ;
+;  Funct[5] ; Funct[1]   ; 2.956  ; 2.956  ; Rise       ; Funct[1]        ;
+; OP[*]     ; Funct[1]   ; 2.883  ; 2.883  ; Rise       ; Funct[1]        ;
+;  OP[0]    ; Funct[1]   ; 0.892  ; 0.892  ; Rise       ; Funct[1]        ;
+;  OP[1]    ; Funct[1]   ; 2.883  ; 2.883  ; Rise       ; Funct[1]        ;
+; Funct[*]  ; Funct[1]   ; 3.924  ; 3.924  ; Fall       ; Funct[1]        ;
+;  Funct[0] ; Funct[1]   ; -0.212 ; -0.212 ; Fall       ; Funct[1]        ;
+;  Funct[1] ; Funct[1]   ; -0.058 ; -0.058 ; Fall       ; Funct[1]        ;
+;  Funct[2] ; Funct[1]   ; 3.924  ; 3.924  ; Fall       ; Funct[1]        ;
+;  Funct[5] ; Funct[1]   ; 2.860  ; 2.860  ; Fall       ; Funct[1]        ;
+; OP[*]     ; Funct[1]   ; 2.787  ; 2.787  ; Fall       ; Funct[1]        ;
+;  OP[0]    ; Funct[1]   ; 0.286  ; 0.286  ; Fall       ; Funct[1]        ;
+;  OP[1]    ; Funct[1]   ; 2.787  ; 2.787  ; Fall       ; Funct[1]        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Funct[*]  ; Funct[0]   ; 1.150  ; 1.150  ; Rise       ; Funct[0]        ;
+;  Funct[0] ; Funct[0]   ; 1.150  ; 1.150  ; Rise       ; Funct[0]        ;
+;  Funct[1] ; Funct[0]   ; 0.837  ; 0.837  ; Rise       ; Funct[0]        ;
+;  Funct[2] ; Funct[0]   ; -2.067 ; -2.067 ; Rise       ; Funct[0]        ;
+;  Funct[5] ; Funct[0]   ; -2.172 ; -2.172 ; Rise       ; Funct[0]        ;
+; OP[*]     ; Funct[0]   ; 2.215  ; 2.215  ; Rise       ; Funct[0]        ;
+;  OP[0]    ; Funct[0]   ; 2.215  ; 2.215  ; Rise       ; Funct[0]        ;
+;  OP[1]    ; Funct[0]   ; -1.053 ; -1.053 ; Rise       ; Funct[0]        ;
+; Funct[*]  ; Funct[0]   ; 1.198  ; 1.198  ; Fall       ; Funct[0]        ;
+;  Funct[0] ; Funct[0]   ; 1.198  ; 1.198  ; Fall       ; Funct[0]        ;
+;  Funct[1] ; Funct[0]   ; 1.030  ; 1.030  ; Fall       ; Funct[0]        ;
+;  Funct[2] ; Funct[0]   ; -2.019 ; -2.019 ; Fall       ; Funct[0]        ;
+;  Funct[5] ; Funct[0]   ; -2.124 ; -2.124 ; Fall       ; Funct[0]        ;
+; OP[*]     ; Funct[0]   ; 2.263  ; 2.263  ; Fall       ; Funct[0]        ;
+;  OP[0]    ; Funct[0]   ; 2.263  ; 2.263  ; Fall       ; Funct[0]        ;
+;  OP[1]    ; Funct[0]   ; -1.005 ; -1.005 ; Fall       ; Funct[0]        ;
+; Funct[*]  ; Funct[1]   ; 1.567  ; 1.567  ; Rise       ; Funct[1]        ;
+;  Funct[0] ; Funct[1]   ; 1.567  ; 1.567  ; Rise       ; Funct[1]        ;
+;  Funct[1] ; Funct[1]   ; 1.399  ; 1.399  ; Rise       ; Funct[1]        ;
+;  Funct[2] ; Funct[1]   ; -1.650 ; -1.650 ; Rise       ; Funct[1]        ;
+;  Funct[5] ; Funct[1]   ; -1.755 ; -1.755 ; Rise       ; Funct[1]        ;
+; OP[*]     ; Funct[1]   ; 2.632  ; 2.632  ; Rise       ; Funct[1]        ;
+;  OP[0]    ; Funct[1]   ; 2.632  ; 2.632  ; Rise       ; Funct[1]        ;
+;  OP[1]    ; Funct[1]   ; -0.636 ; -0.636 ; Rise       ; Funct[1]        ;
+; Funct[*]  ; Funct[1]   ; 1.287  ; 1.287  ; Fall       ; Funct[1]        ;
+;  Funct[0] ; Funct[1]   ; 1.287  ; 1.287  ; Fall       ; Funct[1]        ;
+;  Funct[1] ; Funct[1]   ; 1.120  ; 1.120  ; Fall       ; Funct[1]        ;
+;  Funct[2] ; Funct[1]   ; -1.930 ; -1.930 ; Fall       ; Funct[1]        ;
+;  Funct[5] ; Funct[1]   ; -2.035 ; -2.035 ; Fall       ; Funct[1]        ;
+; OP[*]     ; Funct[1]   ; 2.352  ; 2.352  ; Fall       ; Funct[1]        ;
+;  OP[0]    ; Funct[1]   ; 2.352  ; 2.352  ; Fall       ; Funct[1]        ;
+;  OP[1]    ; Funct[1]   ; -0.916 ; -0.916 ; Fall       ; Funct[1]        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; ALUScr     ; Funct[0]   ; 8.659 ; 8.659 ; Rise       ; Funct[0]        ;
+; ALUop      ; Funct[0]   ; 8.391 ; 8.391 ; Rise       ; Funct[0]        ;
+; Branch     ; Funct[0]   ; 8.625 ; 8.625 ; Rise       ; Funct[0]        ;
+; MemtoReg   ; Funct[0]   ; 8.354 ; 8.354 ; Rise       ; Funct[0]        ;
+; Memw       ; Funct[0]   ; 8.603 ; 8.603 ; Rise       ; Funct[0]        ;
+; RegSrc[*]  ; Funct[0]   ; 8.635 ; 8.635 ; Rise       ; Funct[0]        ;
+;  RegSrc[0] ; Funct[0]   ; 8.635 ; 8.635 ; Rise       ; Funct[0]        ;
+;  RegSrc[1] ; Funct[0]   ; 6.471 ; 6.471 ; Rise       ; Funct[0]        ;
+; RegW       ; Funct[0]   ; 8.617 ; 8.617 ; Rise       ; Funct[0]        ;
+; ALUScr     ; Funct[0]   ; 8.707 ; 8.707 ; Fall       ; Funct[0]        ;
+; ALUop      ; Funct[0]   ; 8.439 ; 8.439 ; Fall       ; Funct[0]        ;
+; Branch     ; Funct[0]   ; 8.673 ; 8.673 ; Fall       ; Funct[0]        ;
+; MemtoReg   ; Funct[0]   ; 8.402 ; 8.402 ; Fall       ; Funct[0]        ;
+; Memw       ; Funct[0]   ; 8.651 ; 8.651 ; Fall       ; Funct[0]        ;
+; RegSrc[*]  ; Funct[0]   ; 8.683 ; 8.683 ; Fall       ; Funct[0]        ;
+;  RegSrc[0] ; Funct[0]   ; 8.683 ; 8.683 ; Fall       ; Funct[0]        ;
+;  RegSrc[1] ; Funct[0]   ; 6.750 ; 6.750 ; Fall       ; Funct[0]        ;
+; RegW       ; Funct[0]   ; 8.665 ; 8.665 ; Fall       ; Funct[0]        ;
+; ALUScr     ; Funct[1]   ; 9.076 ; 9.076 ; Rise       ; Funct[1]        ;
+; ALUop      ; Funct[1]   ; 8.808 ; 8.808 ; Rise       ; Funct[1]        ;
+; Branch     ; Funct[1]   ; 9.042 ; 9.042 ; Rise       ; Funct[1]        ;
+; ImmSrc[*]  ; Funct[1]   ; 8.508 ; 8.508 ; Rise       ; Funct[1]        ;
+;  ImmSrc[0] ; Funct[1]   ; 8.159 ; 8.159 ; Rise       ; Funct[1]        ;
+;  ImmSrc[1] ; Funct[1]   ; 8.508 ; 8.508 ; Rise       ; Funct[1]        ;
+; MemtoReg   ; Funct[1]   ; 8.771 ; 8.771 ; Rise       ; Funct[1]        ;
+; Memw       ; Funct[1]   ; 9.020 ; 9.020 ; Rise       ; Funct[1]        ;
+; RegSrc[*]  ; Funct[1]   ; 9.052 ; 9.052 ; Rise       ; Funct[1]        ;
+;  RegSrc[0] ; Funct[1]   ; 9.052 ; 9.052 ; Rise       ; Funct[1]        ;
+;  RegSrc[1] ; Funct[1]   ; 7.119 ; 7.119 ; Rise       ; Funct[1]        ;
+; RegW       ; Funct[1]   ; 9.034 ; 9.034 ; Rise       ; Funct[1]        ;
+; ALUScr     ; Funct[1]   ; 8.796 ; 8.796 ; Fall       ; Funct[1]        ;
+; ALUop      ; Funct[1]   ; 8.528 ; 8.528 ; Fall       ; Funct[1]        ;
+; Branch     ; Funct[1]   ; 8.762 ; 8.762 ; Fall       ; Funct[1]        ;
+; MemtoReg   ; Funct[1]   ; 8.491 ; 8.491 ; Fall       ; Funct[1]        ;
+; Memw       ; Funct[1]   ; 8.740 ; 8.740 ; Fall       ; Funct[1]        ;
+; RegSrc[*]  ; Funct[1]   ; 8.772 ; 8.772 ; Fall       ; Funct[1]        ;
+;  RegSrc[0] ; Funct[1]   ; 8.772 ; 8.772 ; Fall       ; Funct[1]        ;
+;  RegSrc[1] ; Funct[1]   ; 6.840 ; 6.840 ; Fall       ; Funct[1]        ;
+; RegW       ; Funct[1]   ; 8.754 ; 8.754 ; Fall       ; Funct[1]        ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; ALUScr     ; Funct[0]   ; 8.427 ; 8.427 ; Rise       ; Funct[0]        ;
+; ALUop      ; Funct[0]   ; 8.159 ; 8.159 ; Rise       ; Funct[0]        ;
+; Branch     ; Funct[0]   ; 8.393 ; 8.393 ; Rise       ; Funct[0]        ;
+; MemtoReg   ; Funct[0]   ; 8.122 ; 8.122 ; Rise       ; Funct[0]        ;
+; Memw       ; Funct[0]   ; 8.371 ; 8.371 ; Rise       ; Funct[0]        ;
+; RegSrc[*]  ; Funct[0]   ; 6.206 ; 6.206 ; Rise       ; Funct[0]        ;
+;  RegSrc[0] ; Funct[0]   ; 8.403 ; 8.403 ; Rise       ; Funct[0]        ;
+;  RegSrc[1] ; Funct[0]   ; 6.206 ; 6.206 ; Rise       ; Funct[0]        ;
+; RegW       ; Funct[0]   ; 8.385 ; 8.385 ; Rise       ; Funct[0]        ;
+; ALUScr     ; Funct[0]   ; 8.707 ; 8.707 ; Fall       ; Funct[0]        ;
+; ALUop      ; Funct[0]   ; 8.439 ; 8.439 ; Fall       ; Funct[0]        ;
+; Branch     ; Funct[0]   ; 8.673 ; 8.673 ; Fall       ; Funct[0]        ;
+; MemtoReg   ; Funct[0]   ; 8.402 ; 8.402 ; Fall       ; Funct[0]        ;
+; Memw       ; Funct[0]   ; 8.651 ; 8.651 ; Fall       ; Funct[0]        ;
+; RegSrc[*]  ; Funct[0]   ; 6.750 ; 6.750 ; Fall       ; Funct[0]        ;
+;  RegSrc[0] ; Funct[0]   ; 8.683 ; 8.683 ; Fall       ; Funct[0]        ;
+;  RegSrc[1] ; Funct[0]   ; 6.750 ; 6.750 ; Fall       ; Funct[0]        ;
+; RegW       ; Funct[0]   ; 8.665 ; 8.665 ; Fall       ; Funct[0]        ;
+; ALUScr     ; Funct[1]   ; 8.700 ; 8.700 ; Rise       ; Funct[1]        ;
+; ALUop      ; Funct[1]   ; 8.432 ; 8.432 ; Rise       ; Funct[1]        ;
+; Branch     ; Funct[1]   ; 8.666 ; 8.666 ; Rise       ; Funct[1]        ;
+; ImmSrc[*]  ; Funct[1]   ; 8.159 ; 8.159 ; Rise       ; Funct[1]        ;
+;  ImmSrc[0] ; Funct[1]   ; 8.159 ; 8.159 ; Rise       ; Funct[1]        ;
+;  ImmSrc[1] ; Funct[1]   ; 8.508 ; 8.508 ; Rise       ; Funct[1]        ;
+; MemtoReg   ; Funct[1]   ; 8.395 ; 8.395 ; Rise       ; Funct[1]        ;
+; Memw       ; Funct[1]   ; 8.644 ; 8.644 ; Rise       ; Funct[1]        ;
+; RegSrc[*]  ; Funct[1]   ; 6.554 ; 6.554 ; Rise       ; Funct[1]        ;
+;  RegSrc[0] ; Funct[1]   ; 8.676 ; 8.676 ; Rise       ; Funct[1]        ;
+;  RegSrc[1] ; Funct[1]   ; 6.554 ; 6.554 ; Rise       ; Funct[1]        ;
+; RegW       ; Funct[1]   ; 8.658 ; 8.658 ; Rise       ; Funct[1]        ;
+; ALUScr     ; Funct[1]   ; 8.796 ; 8.796 ; Fall       ; Funct[1]        ;
+; ALUop      ; Funct[1]   ; 8.528 ; 8.528 ; Fall       ; Funct[1]        ;
+; Branch     ; Funct[1]   ; 8.762 ; 8.762 ; Fall       ; Funct[1]        ;
+; MemtoReg   ; Funct[1]   ; 8.491 ; 8.491 ; Fall       ; Funct[1]        ;
+; Memw       ; Funct[1]   ; 8.740 ; 8.740 ; Fall       ; Funct[1]        ;
+; RegSrc[*]  ; Funct[1]   ; 6.840 ; 6.840 ; Fall       ; Funct[1]        ;
+;  RegSrc[0] ; Funct[1]   ; 8.772 ; 8.772 ; Fall       ; Funct[1]        ;
+;  RegSrc[1] ; Funct[1]   ; 6.840 ; 6.840 ; Fall       ; Funct[1]        ;
+; RegW       ; Funct[1]   ; 8.754 ; 8.754 ; Fall       ; Funct[1]        ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------+
+; Fast Model Setup Summary         ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; Funct[0] ; 0.255 ; 0.000         ;
+; Funct[1] ; 0.443 ; 0.000         ;
++----------+-------+---------------+
+
+
++-----------------------------------+
+; Fast Model Hold Summary           ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; Funct[1] ; -0.959 ; -5.565        ;
+; Funct[0] ; -0.761 ; -4.023        ;
++----------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; Funct[0] ; -1.380 ; -1.380             ;
+; Funct[1] ; -1.222 ; -1.222             ;
++----------+--------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Funct[0]'                                                                              ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; 0.255 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[0]    ; 0.500        ; 1.340      ; 1.186      ;
+; 0.484 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[0]    ; 0.500        ; 1.569      ; 1.186      ;
+; 0.570 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[0]    ; 0.500        ; 2.505      ; 2.083      ;
+; 0.587 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[0]    ; 0.500        ; 2.505      ; 2.077      ;
+; 0.588 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[0]    ; 0.500        ; 2.504      ; 2.076      ;
+; 0.640 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[0]    ; 0.500        ; 2.505      ; 2.013      ;
+; 0.687 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[0]    ; 0.500        ; 2.622      ; 2.083      ;
+; 0.704 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[0]    ; 0.500        ; 2.622      ; 2.077      ;
+; 0.705 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[0]    ; 0.500        ; 2.621      ; 2.076      ;
+; 0.750 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[0]    ; 0.500        ; 2.505      ; 1.914      ;
+; 0.750 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[0]    ; 0.500        ; 2.504      ; 1.914      ;
+; 0.755 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[0]    ; 1.000        ; 1.340      ; 1.186      ;
+; 0.757 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[0]    ; 0.500        ; 2.622      ; 2.013      ;
+; 0.767 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[0]    ; 0.500        ; 2.501      ; 1.895      ;
+; 0.863 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[0]    ; 0.500        ; 2.504      ; 1.870      ;
+; 0.867 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[0]    ; 0.500        ; 2.622      ; 1.914      ;
+; 0.867 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[0]    ; 0.500        ; 2.621      ; 1.914      ;
+; 0.884 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[0]    ; 0.500        ; 2.618      ; 1.895      ;
+; 0.980 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[0]    ; 0.500        ; 2.621      ; 1.870      ;
+; 0.984 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[0]    ; 1.000        ; 1.569      ; 1.186      ;
+; 1.070 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[0]    ; 1.000        ; 2.505      ; 2.083      ;
+; 1.087 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[0]    ; 1.000        ; 2.505      ; 2.077      ;
+; 1.088 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[0]    ; 1.000        ; 2.504      ; 2.076      ;
+; 1.140 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[0]    ; 1.000        ; 2.505      ; 2.013      ;
+; 1.187 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[0]    ; 1.000        ; 2.622      ; 2.083      ;
+; 1.204 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[0]    ; 1.000        ; 2.622      ; 2.077      ;
+; 1.205 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[0]    ; 1.000        ; 2.621      ; 2.076      ;
+; 1.250 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[0]    ; 1.000        ; 2.505      ; 1.914      ;
+; 1.250 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[0]    ; 1.000        ; 2.504      ; 1.914      ;
+; 1.257 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[0]    ; 1.000        ; 2.622      ; 2.013      ;
+; 1.267 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[0]    ; 1.000        ; 2.501      ; 1.895      ;
+; 1.363 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[0]    ; 1.000        ; 2.504      ; 1.870      ;
+; 1.367 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[0]    ; 1.000        ; 2.622      ; 1.914      ;
+; 1.367 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[0]    ; 1.000        ; 2.621      ; 1.914      ;
+; 1.384 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[0]    ; 1.000        ; 2.618      ; 1.895      ;
+; 1.480 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[0]    ; 1.000        ; 2.621      ; 1.870      ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Funct[1]'                                                                              ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; 0.443 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[1]    ; 0.500        ; 1.528      ; 1.186      ;
+; 0.503 ; Funct[1]  ; ImmSrc[0]$latch ; Funct[1]     ; Funct[1]    ; 0.500        ; 2.536      ; 2.192      ;
+; 0.580 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[1]    ; 0.500        ; 1.665      ; 1.186      ;
+; 0.732 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[1]    ; 0.500        ; 2.667      ; 2.083      ;
+; 0.749 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[1]    ; 0.500        ; 2.667      ; 2.077      ;
+; 0.750 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[1]    ; 0.500        ; 2.666      ; 2.076      ;
+; 0.781 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[1]    ; 0.500        ; 2.716      ; 2.083      ;
+; 0.798 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[1]    ; 0.500        ; 2.716      ; 2.077      ;
+; 0.799 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[1]    ; 0.500        ; 2.715      ; 2.076      ;
+; 0.802 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[1]    ; 0.500        ; 2.667      ; 2.013      ;
+; 0.851 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[1]    ; 0.500        ; 2.716      ; 2.013      ;
+; 0.912 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[1]    ; 0.500        ; 2.667      ; 1.914      ;
+; 0.912 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[1]    ; 0.500        ; 2.666      ; 1.914      ;
+; 0.929 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[1]    ; 0.500        ; 2.663      ; 1.895      ;
+; 0.943 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[1]    ; 1.000        ; 1.528      ; 1.186      ;
+; 0.961 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[1]    ; 0.500        ; 2.716      ; 1.914      ;
+; 0.961 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[1]    ; 0.500        ; 2.715      ; 1.914      ;
+; 0.978 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[1]    ; 0.500        ; 2.712      ; 1.895      ;
+; 1.003 ; Funct[1]  ; ImmSrc[0]$latch ; Funct[1]     ; Funct[1]    ; 1.000        ; 2.536      ; 2.192      ;
+; 1.025 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[1]    ; 0.500        ; 2.666      ; 1.870      ;
+; 1.074 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[1]    ; 0.500        ; 2.715      ; 1.870      ;
+; 1.080 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[1]    ; 1.000        ; 1.665      ; 1.186      ;
+; 1.232 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[1]    ; 1.000        ; 2.667      ; 2.083      ;
+; 1.249 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[1]    ; 1.000        ; 2.667      ; 2.077      ;
+; 1.250 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[1]    ; 1.000        ; 2.666      ; 2.076      ;
+; 1.281 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[1]    ; 1.000        ; 2.716      ; 2.083      ;
+; 1.298 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[1]    ; 1.000        ; 2.716      ; 2.077      ;
+; 1.299 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[1]    ; 1.000        ; 2.715      ; 2.076      ;
+; 1.302 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[1]    ; 1.000        ; 2.667      ; 2.013      ;
+; 1.351 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[1]    ; 1.000        ; 2.716      ; 2.013      ;
+; 1.412 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[1]    ; 1.000        ; 2.667      ; 1.914      ;
+; 1.412 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[1]    ; 1.000        ; 2.666      ; 1.914      ;
+; 1.429 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[1]    ; 1.000        ; 2.663      ; 1.895      ;
+; 1.461 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[1]    ; 1.000        ; 2.716      ; 1.914      ;
+; 1.461 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[1]    ; 1.000        ; 2.715      ; 1.914      ;
+; 1.478 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[1]    ; 1.000        ; 2.712      ; 1.895      ;
+; 1.525 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[1]    ; 1.000        ; 2.666      ; 1.870      ;
+; 1.574 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[1]    ; 1.000        ; 2.715      ; 1.870      ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Funct[1]'                                                                                ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; -0.959 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[1]    ; 0.000        ; 2.829      ; 1.870      ;
+; -0.931 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[1]    ; 0.000        ; 2.826      ; 1.895      ;
+; -0.916 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[1]    ; 0.000        ; 2.830      ; 1.914      ;
+; -0.915 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[1]    ; 0.000        ; 2.829      ; 1.914      ;
+; -0.909 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[1]    ; 0.000        ; 2.830      ; 1.921      ;
+; -0.845 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[1]    ; 0.000        ; 2.715      ; 1.870      ;
+; -0.817 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[1]    ; 0.000        ; 2.712      ; 1.895      ;
+; -0.802 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[1]    ; 0.000        ; 2.716      ; 1.914      ;
+; -0.801 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[1]    ; 0.000        ; 2.715      ; 1.914      ;
+; -0.795 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[1]    ; 0.000        ; 2.716      ; 1.921      ;
+; -0.790 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[1]    ; 0.000        ; 2.830      ; 2.040      ;
+; -0.753 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[1]    ; 0.000        ; 2.829      ; 2.076      ;
+; -0.747 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[1]    ; 0.000        ; 2.830      ; 2.083      ;
+; -0.676 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[1]    ; 0.000        ; 2.716      ; 2.040      ;
+; -0.639 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[1]    ; 0.000        ; 2.715      ; 2.076      ;
+; -0.633 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[1]    ; 0.000        ; 2.716      ; 2.083      ;
+; -0.591 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[1]    ; 0.000        ; 1.777      ; 1.186      ;
+; -0.479 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[1]    ; 0.000        ; 1.665      ; 1.186      ;
+; -0.459 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[1]    ; -0.500       ; 2.829      ; 1.870      ;
+; -0.431 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[1]    ; -0.500       ; 2.826      ; 1.895      ;
+; -0.416 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[1]    ; -0.500       ; 2.830      ; 1.914      ;
+; -0.415 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[1]    ; -0.500       ; 2.829      ; 1.914      ;
+; -0.409 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[1]    ; -0.500       ; 2.830      ; 1.921      ;
+; -0.345 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[1]    ; -0.500       ; 2.715      ; 1.870      ;
+; -0.344 ; Funct[1]  ; ImmSrc[0]$latch ; Funct[1]     ; Funct[1]    ; 0.000        ; 2.536      ; 2.192      ;
+; -0.317 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[1]    ; -0.500       ; 2.712      ; 1.895      ;
+; -0.302 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[1]    ; -0.500       ; 2.716      ; 1.914      ;
+; -0.301 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[1]    ; -0.500       ; 2.715      ; 1.914      ;
+; -0.295 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[1]    ; -0.500       ; 2.716      ; 1.921      ;
+; -0.290 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[1]    ; -0.500       ; 2.830      ; 2.040      ;
+; -0.253 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[1]    ; -0.500       ; 2.829      ; 2.076      ;
+; -0.247 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[1]    ; -0.500       ; 2.830      ; 2.083      ;
+; -0.176 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[1]    ; -0.500       ; 2.716      ; 2.040      ;
+; -0.139 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[1]    ; -0.500       ; 2.715      ; 2.076      ;
+; -0.133 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[1]    ; -0.500       ; 2.716      ; 2.083      ;
+; -0.091 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[1]    ; -0.500       ; 1.777      ; 1.186      ;
+; 0.021  ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[1]    ; -0.500       ; 1.665      ; 1.186      ;
+; 0.156  ; Funct[1]  ; ImmSrc[0]$latch ; Funct[1]     ; Funct[1]    ; -0.500       ; 2.536      ; 2.192      ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Funct[0]'                                                                                ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; -0.761 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[0]    ; 0.000        ; 2.631      ; 1.870      ;
+; -0.751 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[0]    ; 0.000        ; 2.621      ; 1.870      ;
+; -0.733 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[0]    ; 0.000        ; 2.628      ; 1.895      ;
+; -0.723 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[0]    ; 0.000        ; 2.618      ; 1.895      ;
+; -0.718 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[0]    ; 0.000        ; 2.632      ; 1.914      ;
+; -0.717 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[0]    ; 0.000        ; 2.631      ; 1.914      ;
+; -0.711 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[0]    ; 0.000        ; 2.632      ; 1.921      ;
+; -0.708 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[0]    ; 0.000        ; 2.622      ; 1.914      ;
+; -0.707 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[0]    ; 0.000        ; 2.621      ; 1.914      ;
+; -0.701 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[0]    ; 0.000        ; 2.622      ; 1.921      ;
+; -0.592 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[0]    ; 0.000        ; 2.632      ; 2.040      ;
+; -0.582 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[0]    ; 0.000        ; 2.622      ; 2.040      ;
+; -0.555 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[0]    ; 0.000        ; 2.631      ; 2.076      ;
+; -0.549 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[0]    ; 0.000        ; 2.632      ; 2.083      ;
+; -0.545 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[0]    ; 0.000        ; 2.621      ; 2.076      ;
+; -0.539 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[0]    ; 0.000        ; 2.622      ; 2.083      ;
+; -0.383 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[0]    ; 0.000        ; 1.569      ; 1.186      ;
+; -0.268 ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[0]    ; 0.000        ; 1.454      ; 1.186      ;
+; -0.261 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[0]    ; -0.500       ; 2.631      ; 1.870      ;
+; -0.251 ; Funct[0]  ; Memw$latch      ; Funct[0]     ; Funct[0]    ; -0.500       ; 2.621      ; 1.870      ;
+; -0.233 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[0]    ; -0.500       ; 2.628      ; 1.895      ;
+; -0.223 ; Funct[0]  ; MemtoReg$latch  ; Funct[0]     ; Funct[0]    ; -0.500       ; 2.618      ; 1.895      ;
+; -0.218 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[0]    ; -0.500       ; 2.632      ; 1.914      ;
+; -0.217 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[0]    ; -0.500       ; 2.631      ; 1.914      ;
+; -0.211 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[0]    ; -0.500       ; 2.632      ; 1.921      ;
+; -0.208 ; Funct[0]  ; ALUScr$latch    ; Funct[0]     ; Funct[0]    ; -0.500       ; 2.622      ; 1.914      ;
+; -0.207 ; Funct[0]  ; ALUop$latch     ; Funct[0]     ; Funct[0]    ; -0.500       ; 2.621      ; 1.914      ;
+; -0.201 ; Funct[0]  ; RegW$latch      ; Funct[0]     ; Funct[0]    ; -0.500       ; 2.622      ; 1.921      ;
+; -0.092 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[0]    ; -0.500       ; 2.632      ; 2.040      ;
+; -0.082 ; Funct[1]  ; ALUScr$latch    ; Funct[1]     ; Funct[0]    ; -0.500       ; 2.622      ; 2.040      ;
+; -0.055 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[0]    ; -0.500       ; 2.631      ; 2.076      ;
+; -0.049 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[0]    ; -0.500       ; 2.632      ; 2.083      ;
+; -0.045 ; Funct[1]  ; ALUop$latch     ; Funct[1]     ; Funct[0]    ; -0.500       ; 2.621      ; 2.076      ;
+; -0.039 ; Funct[1]  ; RegW$latch      ; Funct[1]     ; Funct[0]    ; -0.500       ; 2.622      ; 2.083      ;
+; 0.117  ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[0]    ; -0.500       ; 1.569      ; 1.186      ;
+; 0.232  ; Funct[1]  ; RegSrc[1]$latch ; Funct[1]     ; Funct[0]    ; -0.500       ; 1.454      ; 1.186      ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Funct[0]'                                                                  ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                  ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; Funct[0] ; Rise       ; Funct[0]                ;
+; 0.373  ; 0.373        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; ALUScr$latch            ;
+; 0.373  ; 0.373        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; ALUScr$latch            ;
+; 0.373  ; 0.373        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; ALUScr$latch|datad      ;
+; 0.373  ; 0.373        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; ALUScr$latch|datad      ;
+; 0.373  ; 0.373        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; ALUop$latch             ;
+; 0.373  ; 0.373        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; ALUop$latch             ;
+; 0.373  ; 0.373        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; ALUop$latch|datad       ;
+; 0.373  ; 0.373        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; ALUop$latch|datad       ;
+; 0.373  ; 0.373        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Branch$latch            ;
+; 0.373  ; 0.373        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Branch$latch            ;
+; 0.373  ; 0.373        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Branch$latch|datad      ;
+; 0.373  ; 0.373        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Branch$latch|datad      ;
+; 0.373  ; 0.373        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; MemtoReg$latch          ;
+; 0.373  ; 0.373        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; MemtoReg$latch          ;
+; 0.373  ; 0.373        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; MemtoReg$latch|datad    ;
+; 0.373  ; 0.373        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; MemtoReg$latch|datad    ;
+; 0.373  ; 0.373        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Memw$latch              ;
+; 0.373  ; 0.373        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Memw$latch              ;
+; 0.373  ; 0.373        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Memw$latch|datad        ;
+; 0.373  ; 0.373        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Memw$latch|datad        ;
+; 0.373  ; 0.373        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux24~1clkctrl|inclk[0] ;
+; 0.373  ; 0.373        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux24~1clkctrl|inclk[0] ;
+; 0.373  ; 0.373        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux24~1clkctrl|outclk   ;
+; 0.373  ; 0.373        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux24~1clkctrl|outclk   ;
+; 0.373  ; 0.373        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux24~1|combout         ;
+; 0.373  ; 0.373        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux24~1|combout         ;
+; 0.373  ; 0.373        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; RegW$latch              ;
+; 0.373  ; 0.373        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; RegW$latch              ;
+; 0.373  ; 0.373        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; RegW$latch|datad        ;
+; 0.373  ; 0.373        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; RegW$latch|datad        ;
+; 0.386  ; 0.386        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux7~10|combout         ;
+; 0.386  ; 0.386        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux7~10|combout         ;
+; 0.386  ; 0.386        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; RegSrc[1]$latch         ;
+; 0.386  ; 0.386        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; RegSrc[1]$latch         ;
+; 0.386  ; 0.386        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; RegSrc[1]$latch|datac   ;
+; 0.386  ; 0.386        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; RegSrc[1]$latch|datac   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; ALUScr$latch            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; ALUScr$latch            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; ALUScr$latch|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; ALUScr$latch|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; ALUop$latch             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; ALUop$latch             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; ALUop$latch|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; ALUop$latch|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Branch$latch            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Branch$latch            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Branch$latch|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Branch$latch|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Funct[0]|combout        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Funct[0]|combout        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; MemtoReg$latch          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; MemtoReg$latch          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; MemtoReg$latch|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; MemtoReg$latch|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Memw$latch              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Memw$latch              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Memw$latch|datad        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Memw$latch|datad        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux23~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux23~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux23~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Mux23~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux24~1clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Mux24~1clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux24~1clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Mux24~1clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux24~1|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Mux24~1|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux24~1|datab           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Mux24~1|datab           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux24~1|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux24~1|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux24~1|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux24~1|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux7~10|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Mux7~10|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux7~10|datab           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Mux7~10|datab           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux7~10|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux7~10|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux7~10|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux7~10|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux7~2|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux7~2|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux7~2|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Mux7~2|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux7~4|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux7~4|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux7~4|datac            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux7~4|datac            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux7~6|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux7~6|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Fall       ; Mux7~6|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Fall       ; Mux7~6|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux7~7|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Mux7~7|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux7~7|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[0] ; Rise       ; Mux7~7|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[0] ; Rise       ; Mux7~8|combout          ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Funct[1]'                                                                  ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                  ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; Funct[1] ; Rise       ; Funct[1]                ;
+; 0.251  ; 0.251        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux7~10|combout         ;
+; 0.251  ; 0.251        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux7~10|combout         ;
+; 0.251  ; 0.251        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; RegSrc[1]$latch         ;
+; 0.251  ; 0.251        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; RegSrc[1]$latch         ;
+; 0.251  ; 0.251        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; RegSrc[1]$latch|datac   ;
+; 0.251  ; 0.251        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; RegSrc[1]$latch|datac   ;
+; 0.337  ; 0.337        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; ALUScr$latch            ;
+; 0.337  ; 0.337        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; ALUScr$latch            ;
+; 0.337  ; 0.337        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; ALUScr$latch|datad      ;
+; 0.337  ; 0.337        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; ALUScr$latch|datad      ;
+; 0.337  ; 0.337        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; ALUop$latch             ;
+; 0.337  ; 0.337        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; ALUop$latch             ;
+; 0.337  ; 0.337        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; ALUop$latch|datad       ;
+; 0.337  ; 0.337        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; ALUop$latch|datad       ;
+; 0.337  ; 0.337        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Branch$latch            ;
+; 0.337  ; 0.337        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Branch$latch            ;
+; 0.337  ; 0.337        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Branch$latch|datad      ;
+; 0.337  ; 0.337        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Branch$latch|datad      ;
+; 0.337  ; 0.337        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; MemtoReg$latch          ;
+; 0.337  ; 0.337        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; MemtoReg$latch          ;
+; 0.337  ; 0.337        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; MemtoReg$latch|datad    ;
+; 0.337  ; 0.337        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; MemtoReg$latch|datad    ;
+; 0.337  ; 0.337        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Memw$latch              ;
+; 0.337  ; 0.337        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Memw$latch              ;
+; 0.337  ; 0.337        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Memw$latch|datad        ;
+; 0.337  ; 0.337        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Memw$latch|datad        ;
+; 0.337  ; 0.337        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux24~1clkctrl|inclk[0] ;
+; 0.337  ; 0.337        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux24~1clkctrl|inclk[0] ;
+; 0.337  ; 0.337        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux24~1clkctrl|outclk   ;
+; 0.337  ; 0.337        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux24~1clkctrl|outclk   ;
+; 0.337  ; 0.337        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux24~1|combout         ;
+; 0.337  ; 0.337        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux24~1|combout         ;
+; 0.337  ; 0.337        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; RegW$latch              ;
+; 0.337  ; 0.337        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; RegW$latch              ;
+; 0.337  ; 0.337        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; RegW$latch|datad        ;
+; 0.337  ; 0.337        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; RegW$latch|datad        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; ALUScr$latch            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; ALUScr$latch            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; ALUScr$latch|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; ALUScr$latch|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; ALUop$latch             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; ALUop$latch             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; ALUop$latch|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; ALUop$latch|datad       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Branch$latch            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Branch$latch            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Branch$latch|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Branch$latch|datad      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Funct[1]|combout        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Funct[1]|combout        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; ImmSrc[0]$latch         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; ImmSrc[0]$latch         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; ImmSrc[0]$latch|datad   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; ImmSrc[0]$latch|datad   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; ImmSrc[1]$latch         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; ImmSrc[1]$latch         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; ImmSrc[1]$latch|datac   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; ImmSrc[1]$latch|datac   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; MemtoReg$latch          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; MemtoReg$latch          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; MemtoReg$latch|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; MemtoReg$latch|datad    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Memw$latch              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Memw$latch              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Memw$latch|datad        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Memw$latch|datad        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux10~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux10~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux10~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux10~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux10~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux10~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux10~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux10~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Mux23~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Mux23~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Mux23~0|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Mux23~0|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Mux24~1clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Mux24~1clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Mux24~1clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Mux24~1clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Mux24~1|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Mux24~1|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux24~1|datab           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux24~1|datab           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux24~1|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux24~1|datac           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Mux24~1|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Mux24~1|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Mux7~10|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Mux7~10|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux7~10|dataa           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux7~10|dataa           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux7~10|datab           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Fall       ; Mux7~10|datab           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Rise       ; Mux7~10|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Funct[1] ; Rise       ; Mux7~10|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Funct[1] ; Fall       ; Mux7~3|combout          ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Funct[*]  ; Funct[0]   ; 2.661  ; 2.661  ; Rise       ; Funct[0]        ;
+;  Funct[0] ; Funct[0]   ; -0.140 ; -0.140 ; Rise       ; Funct[0]        ;
+;  Funct[1] ; Funct[0]   ; 0.245  ; 0.245  ; Rise       ; Funct[0]        ;
+;  Funct[2] ; Funct[0]   ; 2.661  ; 2.661  ; Rise       ; Funct[0]        ;
+;  Funct[5] ; Funct[0]   ; 1.797  ; 1.797  ; Rise       ; Funct[0]        ;
+; OP[*]     ; Funct[0]   ; 1.756  ; 1.756  ; Rise       ; Funct[0]        ;
+;  OP[0]    ; Funct[0]   ; 0.372  ; 0.372  ; Rise       ; Funct[0]        ;
+;  OP[1]    ; Funct[0]   ; 1.756  ; 1.756  ; Rise       ; Funct[0]        ;
+; Funct[*]  ; Funct[0]   ; 2.432  ; 2.432  ; Fall       ; Funct[0]        ;
+;  Funct[0] ; Funct[0]   ; -0.257 ; -0.257 ; Fall       ; Funct[0]        ;
+;  Funct[1] ; Funct[0]   ; 0.016  ; 0.016  ; Fall       ; Funct[0]        ;
+;  Funct[2] ; Funct[0]   ; 2.432  ; 2.432  ; Fall       ; Funct[0]        ;
+;  Funct[5] ; Funct[0]   ; 1.680  ; 1.680  ; Fall       ; Funct[0]        ;
+; OP[*]     ; Funct[0]   ; 1.639  ; 1.639  ; Fall       ; Funct[0]        ;
+;  OP[0]    ; Funct[0]   ; 0.143  ; 0.143  ; Fall       ; Funct[0]        ;
+;  OP[1]    ; Funct[0]   ; 1.639  ; 1.639  ; Fall       ; Funct[0]        ;
+; Funct[*]  ; Funct[1]   ; 2.473  ; 2.473  ; Rise       ; Funct[1]        ;
+;  Funct[0] ; Funct[1]   ; -0.302 ; -0.302 ; Rise       ; Funct[1]        ;
+;  Funct[1] ; Funct[1]   ; 0.057  ; 0.057  ; Rise       ; Funct[1]        ;
+;  Funct[2] ; Funct[1]   ; 2.473  ; 2.473  ; Rise       ; Funct[1]        ;
+;  Funct[5] ; Funct[1]   ; 1.635  ; 1.635  ; Rise       ; Funct[1]        ;
+; OP[*]     ; Funct[1]   ; 1.594  ; 1.594  ; Rise       ; Funct[1]        ;
+;  OP[0]    ; Funct[1]   ; 0.184  ; 0.184  ; Rise       ; Funct[1]        ;
+;  OP[1]    ; Funct[1]   ; 1.594  ; 1.594  ; Rise       ; Funct[1]        ;
+; Funct[*]  ; Funct[1]   ; 2.336  ; 2.336  ; Fall       ; Funct[1]        ;
+;  Funct[0] ; Funct[1]   ; -0.351 ; -0.351 ; Fall       ; Funct[1]        ;
+;  Funct[1] ; Funct[1]   ; -0.080 ; -0.080 ; Fall       ; Funct[1]        ;
+;  Funct[2] ; Funct[1]   ; 2.336  ; 2.336  ; Fall       ; Funct[1]        ;
+;  Funct[5] ; Funct[1]   ; 1.586  ; 1.586  ; Fall       ; Funct[1]        ;
+; OP[*]     ; Funct[1]   ; 1.545  ; 1.545  ; Fall       ; Funct[1]        ;
+;  OP[0]    ; Funct[1]   ; 0.047  ; 0.047  ; Fall       ; Funct[1]        ;
+;  OP[1]    ; Funct[1]   ; 1.545  ; 1.545  ; Fall       ; Funct[1]        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Funct[*]  ; Funct[0]   ; 0.761  ; 0.761  ; Rise       ; Funct[0]        ;
+;  Funct[0] ; Funct[0]   ; 0.761  ; 0.761  ; Rise       ; Funct[0]        ;
+;  Funct[1] ; Funct[0]   ; 0.592  ; 0.592  ; Rise       ; Funct[0]        ;
+;  Funct[2] ; Funct[0]   ; -1.261 ; -1.261 ; Rise       ; Funct[0]        ;
+;  Funct[5] ; Funct[0]   ; -1.329 ; -1.329 ; Rise       ; Funct[0]        ;
+; OP[*]     ; Funct[0]   ; 1.278  ; 1.278  ; Rise       ; Funct[0]        ;
+;  OP[0]    ; Funct[0]   ; 1.278  ; 1.278  ; Rise       ; Funct[0]        ;
+;  OP[1]    ; Funct[0]   ; -0.840 ; -0.840 ; Rise       ; Funct[0]        ;
+; Funct[*]  ; Funct[0]   ; 0.751  ; 0.751  ; Fall       ; Funct[0]        ;
+;  Funct[0] ; Funct[0]   ; 0.751  ; 0.751  ; Fall       ; Funct[0]        ;
+;  Funct[1] ; Funct[0]   ; 0.582  ; 0.582  ; Fall       ; Funct[0]        ;
+;  Funct[2] ; Funct[0]   ; -1.271 ; -1.271 ; Fall       ; Funct[0]        ;
+;  Funct[5] ; Funct[0]   ; -1.339 ; -1.339 ; Fall       ; Funct[0]        ;
+; OP[*]     ; Funct[0]   ; 1.268  ; 1.268  ; Fall       ; Funct[0]        ;
+;  OP[0]    ; Funct[0]   ; 1.268  ; 1.268  ; Fall       ; Funct[0]        ;
+;  OP[1]    ; Funct[0]   ; -0.850 ; -0.850 ; Fall       ; Funct[0]        ;
+; Funct[*]  ; Funct[1]   ; 0.959  ; 0.959  ; Rise       ; Funct[1]        ;
+;  Funct[0] ; Funct[1]   ; 0.959  ; 0.959  ; Rise       ; Funct[1]        ;
+;  Funct[1] ; Funct[1]   ; 0.790  ; 0.790  ; Rise       ; Funct[1]        ;
+;  Funct[2] ; Funct[1]   ; -1.063 ; -1.063 ; Rise       ; Funct[1]        ;
+;  Funct[5] ; Funct[1]   ; -1.131 ; -1.131 ; Rise       ; Funct[1]        ;
+; OP[*]     ; Funct[1]   ; 1.476  ; 1.476  ; Rise       ; Funct[1]        ;
+;  OP[0]    ; Funct[1]   ; 1.476  ; 1.476  ; Rise       ; Funct[1]        ;
+;  OP[1]    ; Funct[1]   ; -0.642 ; -0.642 ; Rise       ; Funct[1]        ;
+; Funct[*]  ; Funct[1]   ; 0.845  ; 0.845  ; Fall       ; Funct[1]        ;
+;  Funct[0] ; Funct[1]   ; 0.845  ; 0.845  ; Fall       ; Funct[1]        ;
+;  Funct[1] ; Funct[1]   ; 0.676  ; 0.676  ; Fall       ; Funct[1]        ;
+;  Funct[2] ; Funct[1]   ; -1.177 ; -1.177 ; Fall       ; Funct[1]        ;
+;  Funct[5] ; Funct[1]   ; -1.245 ; -1.245 ; Fall       ; Funct[1]        ;
+; OP[*]     ; Funct[1]   ; 1.362  ; 1.362  ; Fall       ; Funct[1]        ;
+;  OP[0]    ; Funct[1]   ; 1.362  ; 1.362  ; Fall       ; Funct[1]        ;
+;  OP[1]    ; Funct[1]   ; -0.756 ; -0.756 ; Fall       ; Funct[1]        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; ALUScr     ; Funct[0]   ; 4.570 ; 4.570 ; Rise       ; Funct[0]        ;
+; ALUop      ; Funct[0]   ; 4.432 ; 4.432 ; Rise       ; Funct[0]        ;
+; Branch     ; Funct[0]   ; 4.535 ; 4.535 ; Rise       ; Funct[0]        ;
+; MemtoReg   ; Funct[0]   ; 4.393 ; 4.393 ; Rise       ; Funct[0]        ;
+; Memw       ; Funct[0]   ; 4.513 ; 4.513 ; Rise       ; Funct[0]        ;
+; RegSrc[*]  ; Funct[0]   ; 4.545 ; 4.545 ; Rise       ; Funct[0]        ;
+;  RegSrc[0] ; Funct[0]   ; 4.545 ; 4.545 ; Rise       ; Funct[0]        ;
+;  RegSrc[1] ; Funct[0]   ; 3.245 ; 3.245 ; Rise       ; Funct[0]        ;
+; RegW       ; Funct[0]   ; 4.530 ; 4.530 ; Rise       ; Funct[0]        ;
+; ALUScr     ; Funct[0]   ; 4.560 ; 4.560 ; Fall       ; Funct[0]        ;
+; ALUop      ; Funct[0]   ; 4.422 ; 4.422 ; Fall       ; Funct[0]        ;
+; Branch     ; Funct[0]   ; 4.525 ; 4.525 ; Fall       ; Funct[0]        ;
+; MemtoReg   ; Funct[0]   ; 4.383 ; 4.383 ; Fall       ; Funct[0]        ;
+; Memw       ; Funct[0]   ; 4.503 ; 4.503 ; Fall       ; Funct[0]        ;
+; RegSrc[*]  ; Funct[0]   ; 4.535 ; 4.535 ; Fall       ; Funct[0]        ;
+;  RegSrc[0] ; Funct[0]   ; 4.535 ; 4.535 ; Fall       ; Funct[0]        ;
+;  RegSrc[1] ; Funct[0]   ; 3.360 ; 3.360 ; Fall       ; Funct[0]        ;
+; RegW       ; Funct[0]   ; 4.520 ; 4.520 ; Fall       ; Funct[0]        ;
+; ALUScr     ; Funct[1]   ; 4.768 ; 4.768 ; Rise       ; Funct[1]        ;
+; ALUop      ; Funct[1]   ; 4.630 ; 4.630 ; Rise       ; Funct[1]        ;
+; Branch     ; Funct[1]   ; 4.733 ; 4.733 ; Rise       ; Funct[1]        ;
+; ImmSrc[*]  ; Funct[1]   ; 4.495 ; 4.495 ; Rise       ; Funct[1]        ;
+;  ImmSrc[0] ; Funct[1]   ; 4.359 ; 4.359 ; Rise       ; Funct[1]        ;
+;  ImmSrc[1] ; Funct[1]   ; 4.495 ; 4.495 ; Rise       ; Funct[1]        ;
+; MemtoReg   ; Funct[1]   ; 4.591 ; 4.591 ; Rise       ; Funct[1]        ;
+; Memw       ; Funct[1]   ; 4.711 ; 4.711 ; Rise       ; Funct[1]        ;
+; RegSrc[*]  ; Funct[1]   ; 4.743 ; 4.743 ; Rise       ; Funct[1]        ;
+;  RegSrc[0] ; Funct[1]   ; 4.743 ; 4.743 ; Rise       ; Funct[1]        ;
+;  RegSrc[1] ; Funct[1]   ; 3.568 ; 3.568 ; Rise       ; Funct[1]        ;
+; RegW       ; Funct[1]   ; 4.728 ; 4.728 ; Rise       ; Funct[1]        ;
+; ALUScr     ; Funct[1]   ; 4.654 ; 4.654 ; Fall       ; Funct[1]        ;
+; ALUop      ; Funct[1]   ; 4.516 ; 4.516 ; Fall       ; Funct[1]        ;
+; Branch     ; Funct[1]   ; 4.619 ; 4.619 ; Fall       ; Funct[1]        ;
+; MemtoReg   ; Funct[1]   ; 4.477 ; 4.477 ; Fall       ; Funct[1]        ;
+; Memw       ; Funct[1]   ; 4.597 ; 4.597 ; Fall       ; Funct[1]        ;
+; RegSrc[*]  ; Funct[1]   ; 4.629 ; 4.629 ; Fall       ; Funct[1]        ;
+;  RegSrc[0] ; Funct[1]   ; 4.629 ; 4.629 ; Fall       ; Funct[1]        ;
+;  RegSrc[1] ; Funct[1]   ; 3.456 ; 3.456 ; Fall       ; Funct[1]        ;
+; RegW       ; Funct[1]   ; 4.614 ; 4.614 ; Fall       ; Funct[1]        ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; ALUScr     ; Funct[0]   ; 4.443 ; 4.443 ; Rise       ; Funct[0]        ;
+; ALUop      ; Funct[0]   ; 4.305 ; 4.305 ; Rise       ; Funct[0]        ;
+; Branch     ; Funct[0]   ; 4.408 ; 4.408 ; Rise       ; Funct[0]        ;
+; MemtoReg   ; Funct[0]   ; 4.266 ; 4.266 ; Rise       ; Funct[0]        ;
+; Memw       ; Funct[0]   ; 4.386 ; 4.386 ; Rise       ; Funct[0]        ;
+; RegSrc[*]  ; Funct[0]   ; 3.131 ; 3.131 ; Rise       ; Funct[0]        ;
+;  RegSrc[0] ; Funct[0]   ; 4.418 ; 4.418 ; Rise       ; Funct[0]        ;
+;  RegSrc[1] ; Funct[0]   ; 3.131 ; 3.131 ; Rise       ; Funct[0]        ;
+; RegW       ; Funct[0]   ; 4.403 ; 4.403 ; Rise       ; Funct[0]        ;
+; ALUScr     ; Funct[0]   ; 4.560 ; 4.560 ; Fall       ; Funct[0]        ;
+; ALUop      ; Funct[0]   ; 4.422 ; 4.422 ; Fall       ; Funct[0]        ;
+; Branch     ; Funct[0]   ; 4.525 ; 4.525 ; Fall       ; Funct[0]        ;
+; MemtoReg   ; Funct[0]   ; 4.383 ; 4.383 ; Fall       ; Funct[0]        ;
+; Memw       ; Funct[0]   ; 4.503 ; 4.503 ; Fall       ; Funct[0]        ;
+; RegSrc[*]  ; Funct[0]   ; 3.360 ; 3.360 ; Fall       ; Funct[0]        ;
+;  RegSrc[0] ; Funct[0]   ; 4.535 ; 4.535 ; Fall       ; Funct[0]        ;
+;  RegSrc[1] ; Funct[0]   ; 3.360 ; 3.360 ; Fall       ; Funct[0]        ;
+; RegW       ; Funct[0]   ; 4.520 ; 4.520 ; Fall       ; Funct[0]        ;
+; ALUScr     ; Funct[1]   ; 4.605 ; 4.605 ; Rise       ; Funct[1]        ;
+; ALUop      ; Funct[1]   ; 4.467 ; 4.467 ; Rise       ; Funct[1]        ;
+; Branch     ; Funct[1]   ; 4.570 ; 4.570 ; Rise       ; Funct[1]        ;
+; ImmSrc[*]  ; Funct[1]   ; 4.359 ; 4.359 ; Rise       ; Funct[1]        ;
+;  ImmSrc[0] ; Funct[1]   ; 4.359 ; 4.359 ; Rise       ; Funct[1]        ;
+;  ImmSrc[1] ; Funct[1]   ; 4.495 ; 4.495 ; Rise       ; Funct[1]        ;
+; MemtoReg   ; Funct[1]   ; 4.428 ; 4.428 ; Rise       ; Funct[1]        ;
+; Memw       ; Funct[1]   ; 4.548 ; 4.548 ; Rise       ; Funct[1]        ;
+; RegSrc[*]  ; Funct[1]   ; 3.319 ; 3.319 ; Rise       ; Funct[1]        ;
+;  RegSrc[0] ; Funct[1]   ; 4.580 ; 4.580 ; Rise       ; Funct[1]        ;
+;  RegSrc[1] ; Funct[1]   ; 3.319 ; 3.319 ; Rise       ; Funct[1]        ;
+; RegW       ; Funct[1]   ; 4.565 ; 4.565 ; Rise       ; Funct[1]        ;
+; ALUScr     ; Funct[1]   ; 4.654 ; 4.654 ; Fall       ; Funct[1]        ;
+; ALUop      ; Funct[1]   ; 4.516 ; 4.516 ; Fall       ; Funct[1]        ;
+; Branch     ; Funct[1]   ; 4.619 ; 4.619 ; Fall       ; Funct[1]        ;
+; MemtoReg   ; Funct[1]   ; 4.477 ; 4.477 ; Fall       ; Funct[1]        ;
+; Memw       ; Funct[1]   ; 4.597 ; 4.597 ; Fall       ; Funct[1]        ;
+; RegSrc[*]  ; Funct[1]   ; 3.456 ; 3.456 ; Fall       ; Funct[1]        ;
+;  RegSrc[0] ; Funct[1]   ; 4.629 ; 4.629 ; Fall       ; Funct[1]        ;
+;  RegSrc[1] ; Funct[1]   ; 3.456 ; 3.456 ; Fall       ; Funct[1]        ;
+; RegW       ; Funct[1]   ; 4.614 ; 4.614 ; Fall       ; Funct[1]        ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+--------+---------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+---------+----------+---------+---------------------+
+; Worst-case Slack ; -0.035 ; -1.567  ; N/A      ; N/A     ; -1.380              ;
+;  Funct[0]        ; 0.028  ; -1.198  ; N/A      ; N/A     ; -1.380              ;
+;  Funct[1]        ; -0.035 ; -1.567  ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS  ; -0.035 ; -15.339 ; 0.0      ; 0.0     ; -2.992              ;
+;  Funct[0]        ; 0.000  ; -6.418  ; N/A      ; N/A     ; -1.380              ;
+;  Funct[1]        ; -0.035 ; -8.921  ; N/A      ; N/A     ; -1.612              ;
++------------------+--------+---------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Funct[*]  ; Funct[0]   ; 4.467  ; 4.467  ; Rise       ; Funct[0]        ;
+;  Funct[0] ; Funct[0]   ; 0.157  ; 0.157  ; Rise       ; Funct[0]        ;
+;  Funct[1] ; Funct[0]   ; 0.472  ; 0.472  ; Rise       ; Funct[0]        ;
+;  Funct[2] ; Funct[0]   ; 4.467  ; 4.467  ; Rise       ; Funct[0]        ;
+;  Funct[5] ; Funct[0]   ; 3.229  ; 3.229  ; Rise       ; Funct[0]        ;
+; OP[*]     ; Funct[0]   ; 3.156  ; 3.156  ; Rise       ; Funct[0]        ;
+;  OP[0]    ; Funct[0]   ; 0.829  ; 0.829  ; Rise       ; Funct[0]        ;
+;  OP[1]    ; Funct[0]   ; 3.156  ; 3.156  ; Rise       ; Funct[0]        ;
+; Funct[*]  ; Funct[0]   ; 4.013  ; 4.013  ; Fall       ; Funct[0]        ;
+;  Funct[0] ; Funct[0]   ; -0.123 ; -0.123 ; Fall       ; Funct[0]        ;
+;  Funct[1] ; Funct[0]   ; 0.031  ; 0.031  ; Fall       ; Funct[0]        ;
+;  Funct[2] ; Funct[0]   ; 4.013  ; 4.013  ; Fall       ; Funct[0]        ;
+;  Funct[5] ; Funct[0]   ; 2.949  ; 2.949  ; Fall       ; Funct[0]        ;
+; OP[*]     ; Funct[0]   ; 2.876  ; 2.876  ; Fall       ; Funct[0]        ;
+;  OP[0]    ; Funct[0]   ; 0.375  ; 0.375  ; Fall       ; Funct[0]        ;
+;  OP[1]    ; Funct[0]   ; 2.876  ; 2.876  ; Fall       ; Funct[0]        ;
+; Funct[*]  ; Funct[1]   ; 4.530  ; 4.530  ; Rise       ; Funct[1]        ;
+;  Funct[0] ; Funct[1]   ; -0.116 ; -0.116 ; Rise       ; Funct[1]        ;
+;  Funct[1] ; Funct[1]   ; 0.535  ; 0.535  ; Rise       ; Funct[1]        ;
+;  Funct[2] ; Funct[1]   ; 4.530  ; 4.530  ; Rise       ; Funct[1]        ;
+;  Funct[5] ; Funct[1]   ; 2.956  ; 2.956  ; Rise       ; Funct[1]        ;
+; OP[*]     ; Funct[1]   ; 2.883  ; 2.883  ; Rise       ; Funct[1]        ;
+;  OP[0]    ; Funct[1]   ; 0.892  ; 0.892  ; Rise       ; Funct[1]        ;
+;  OP[1]    ; Funct[1]   ; 2.883  ; 2.883  ; Rise       ; Funct[1]        ;
+; Funct[*]  ; Funct[1]   ; 3.924  ; 3.924  ; Fall       ; Funct[1]        ;
+;  Funct[0] ; Funct[1]   ; -0.212 ; -0.212 ; Fall       ; Funct[1]        ;
+;  Funct[1] ; Funct[1]   ; -0.058 ; -0.058 ; Fall       ; Funct[1]        ;
+;  Funct[2] ; Funct[1]   ; 3.924  ; 3.924  ; Fall       ; Funct[1]        ;
+;  Funct[5] ; Funct[1]   ; 2.860  ; 2.860  ; Fall       ; Funct[1]        ;
+; OP[*]     ; Funct[1]   ; 2.787  ; 2.787  ; Fall       ; Funct[1]        ;
+;  OP[0]    ; Funct[1]   ; 0.286  ; 0.286  ; Fall       ; Funct[1]        ;
+;  OP[1]    ; Funct[1]   ; 2.787  ; 2.787  ; Fall       ; Funct[1]        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Funct[*]  ; Funct[0]   ; 1.150  ; 1.150  ; Rise       ; Funct[0]        ;
+;  Funct[0] ; Funct[0]   ; 1.150  ; 1.150  ; Rise       ; Funct[0]        ;
+;  Funct[1] ; Funct[0]   ; 0.837  ; 0.837  ; Rise       ; Funct[0]        ;
+;  Funct[2] ; Funct[0]   ; -1.261 ; -1.261 ; Rise       ; Funct[0]        ;
+;  Funct[5] ; Funct[0]   ; -1.329 ; -1.329 ; Rise       ; Funct[0]        ;
+; OP[*]     ; Funct[0]   ; 2.215  ; 2.215  ; Rise       ; Funct[0]        ;
+;  OP[0]    ; Funct[0]   ; 2.215  ; 2.215  ; Rise       ; Funct[0]        ;
+;  OP[1]    ; Funct[0]   ; -0.840 ; -0.840 ; Rise       ; Funct[0]        ;
+; Funct[*]  ; Funct[0]   ; 1.198  ; 1.198  ; Fall       ; Funct[0]        ;
+;  Funct[0] ; Funct[0]   ; 1.198  ; 1.198  ; Fall       ; Funct[0]        ;
+;  Funct[1] ; Funct[0]   ; 1.030  ; 1.030  ; Fall       ; Funct[0]        ;
+;  Funct[2] ; Funct[0]   ; -1.271 ; -1.271 ; Fall       ; Funct[0]        ;
+;  Funct[5] ; Funct[0]   ; -1.339 ; -1.339 ; Fall       ; Funct[0]        ;
+; OP[*]     ; Funct[0]   ; 2.263  ; 2.263  ; Fall       ; Funct[0]        ;
+;  OP[0]    ; Funct[0]   ; 2.263  ; 2.263  ; Fall       ; Funct[0]        ;
+;  OP[1]    ; Funct[0]   ; -0.850 ; -0.850 ; Fall       ; Funct[0]        ;
+; Funct[*]  ; Funct[1]   ; 1.567  ; 1.567  ; Rise       ; Funct[1]        ;
+;  Funct[0] ; Funct[1]   ; 1.567  ; 1.567  ; Rise       ; Funct[1]        ;
+;  Funct[1] ; Funct[1]   ; 1.399  ; 1.399  ; Rise       ; Funct[1]        ;
+;  Funct[2] ; Funct[1]   ; -1.063 ; -1.063 ; Rise       ; Funct[1]        ;
+;  Funct[5] ; Funct[1]   ; -1.131 ; -1.131 ; Rise       ; Funct[1]        ;
+; OP[*]     ; Funct[1]   ; 2.632  ; 2.632  ; Rise       ; Funct[1]        ;
+;  OP[0]    ; Funct[1]   ; 2.632  ; 2.632  ; Rise       ; Funct[1]        ;
+;  OP[1]    ; Funct[1]   ; -0.636 ; -0.636 ; Rise       ; Funct[1]        ;
+; Funct[*]  ; Funct[1]   ; 1.287  ; 1.287  ; Fall       ; Funct[1]        ;
+;  Funct[0] ; Funct[1]   ; 1.287  ; 1.287  ; Fall       ; Funct[1]        ;
+;  Funct[1] ; Funct[1]   ; 1.120  ; 1.120  ; Fall       ; Funct[1]        ;
+;  Funct[2] ; Funct[1]   ; -1.177 ; -1.177 ; Fall       ; Funct[1]        ;
+;  Funct[5] ; Funct[1]   ; -1.245 ; -1.245 ; Fall       ; Funct[1]        ;
+; OP[*]     ; Funct[1]   ; 2.352  ; 2.352  ; Fall       ; Funct[1]        ;
+;  OP[0]    ; Funct[1]   ; 2.352  ; 2.352  ; Fall       ; Funct[1]        ;
+;  OP[1]    ; Funct[1]   ; -0.756 ; -0.756 ; Fall       ; Funct[1]        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; ALUScr     ; Funct[0]   ; 8.659 ; 8.659 ; Rise       ; Funct[0]        ;
+; ALUop      ; Funct[0]   ; 8.391 ; 8.391 ; Rise       ; Funct[0]        ;
+; Branch     ; Funct[0]   ; 8.625 ; 8.625 ; Rise       ; Funct[0]        ;
+; MemtoReg   ; Funct[0]   ; 8.354 ; 8.354 ; Rise       ; Funct[0]        ;
+; Memw       ; Funct[0]   ; 8.603 ; 8.603 ; Rise       ; Funct[0]        ;
+; RegSrc[*]  ; Funct[0]   ; 8.635 ; 8.635 ; Rise       ; Funct[0]        ;
+;  RegSrc[0] ; Funct[0]   ; 8.635 ; 8.635 ; Rise       ; Funct[0]        ;
+;  RegSrc[1] ; Funct[0]   ; 6.471 ; 6.471 ; Rise       ; Funct[0]        ;
+; RegW       ; Funct[0]   ; 8.617 ; 8.617 ; Rise       ; Funct[0]        ;
+; ALUScr     ; Funct[0]   ; 8.707 ; 8.707 ; Fall       ; Funct[0]        ;
+; ALUop      ; Funct[0]   ; 8.439 ; 8.439 ; Fall       ; Funct[0]        ;
+; Branch     ; Funct[0]   ; 8.673 ; 8.673 ; Fall       ; Funct[0]        ;
+; MemtoReg   ; Funct[0]   ; 8.402 ; 8.402 ; Fall       ; Funct[0]        ;
+; Memw       ; Funct[0]   ; 8.651 ; 8.651 ; Fall       ; Funct[0]        ;
+; RegSrc[*]  ; Funct[0]   ; 8.683 ; 8.683 ; Fall       ; Funct[0]        ;
+;  RegSrc[0] ; Funct[0]   ; 8.683 ; 8.683 ; Fall       ; Funct[0]        ;
+;  RegSrc[1] ; Funct[0]   ; 6.750 ; 6.750 ; Fall       ; Funct[0]        ;
+; RegW       ; Funct[0]   ; 8.665 ; 8.665 ; Fall       ; Funct[0]        ;
+; ALUScr     ; Funct[1]   ; 9.076 ; 9.076 ; Rise       ; Funct[1]        ;
+; ALUop      ; Funct[1]   ; 8.808 ; 8.808 ; Rise       ; Funct[1]        ;
+; Branch     ; Funct[1]   ; 9.042 ; 9.042 ; Rise       ; Funct[1]        ;
+; ImmSrc[*]  ; Funct[1]   ; 8.508 ; 8.508 ; Rise       ; Funct[1]        ;
+;  ImmSrc[0] ; Funct[1]   ; 8.159 ; 8.159 ; Rise       ; Funct[1]        ;
+;  ImmSrc[1] ; Funct[1]   ; 8.508 ; 8.508 ; Rise       ; Funct[1]        ;
+; MemtoReg   ; Funct[1]   ; 8.771 ; 8.771 ; Rise       ; Funct[1]        ;
+; Memw       ; Funct[1]   ; 9.020 ; 9.020 ; Rise       ; Funct[1]        ;
+; RegSrc[*]  ; Funct[1]   ; 9.052 ; 9.052 ; Rise       ; Funct[1]        ;
+;  RegSrc[0] ; Funct[1]   ; 9.052 ; 9.052 ; Rise       ; Funct[1]        ;
+;  RegSrc[1] ; Funct[1]   ; 7.119 ; 7.119 ; Rise       ; Funct[1]        ;
+; RegW       ; Funct[1]   ; 9.034 ; 9.034 ; Rise       ; Funct[1]        ;
+; ALUScr     ; Funct[1]   ; 8.796 ; 8.796 ; Fall       ; Funct[1]        ;
+; ALUop      ; Funct[1]   ; 8.528 ; 8.528 ; Fall       ; Funct[1]        ;
+; Branch     ; Funct[1]   ; 8.762 ; 8.762 ; Fall       ; Funct[1]        ;
+; MemtoReg   ; Funct[1]   ; 8.491 ; 8.491 ; Fall       ; Funct[1]        ;
+; Memw       ; Funct[1]   ; 8.740 ; 8.740 ; Fall       ; Funct[1]        ;
+; RegSrc[*]  ; Funct[1]   ; 8.772 ; 8.772 ; Fall       ; Funct[1]        ;
+;  RegSrc[0] ; Funct[1]   ; 8.772 ; 8.772 ; Fall       ; Funct[1]        ;
+;  RegSrc[1] ; Funct[1]   ; 6.840 ; 6.840 ; Fall       ; Funct[1]        ;
+; RegW       ; Funct[1]   ; 8.754 ; 8.754 ; Fall       ; Funct[1]        ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; ALUScr     ; Funct[0]   ; 4.443 ; 4.443 ; Rise       ; Funct[0]        ;
+; ALUop      ; Funct[0]   ; 4.305 ; 4.305 ; Rise       ; Funct[0]        ;
+; Branch     ; Funct[0]   ; 4.408 ; 4.408 ; Rise       ; Funct[0]        ;
+; MemtoReg   ; Funct[0]   ; 4.266 ; 4.266 ; Rise       ; Funct[0]        ;
+; Memw       ; Funct[0]   ; 4.386 ; 4.386 ; Rise       ; Funct[0]        ;
+; RegSrc[*]  ; Funct[0]   ; 3.131 ; 3.131 ; Rise       ; Funct[0]        ;
+;  RegSrc[0] ; Funct[0]   ; 4.418 ; 4.418 ; Rise       ; Funct[0]        ;
+;  RegSrc[1] ; Funct[0]   ; 3.131 ; 3.131 ; Rise       ; Funct[0]        ;
+; RegW       ; Funct[0]   ; 4.403 ; 4.403 ; Rise       ; Funct[0]        ;
+; ALUScr     ; Funct[0]   ; 4.560 ; 4.560 ; Fall       ; Funct[0]        ;
+; ALUop      ; Funct[0]   ; 4.422 ; 4.422 ; Fall       ; Funct[0]        ;
+; Branch     ; Funct[0]   ; 4.525 ; 4.525 ; Fall       ; Funct[0]        ;
+; MemtoReg   ; Funct[0]   ; 4.383 ; 4.383 ; Fall       ; Funct[0]        ;
+; Memw       ; Funct[0]   ; 4.503 ; 4.503 ; Fall       ; Funct[0]        ;
+; RegSrc[*]  ; Funct[0]   ; 3.360 ; 3.360 ; Fall       ; Funct[0]        ;
+;  RegSrc[0] ; Funct[0]   ; 4.535 ; 4.535 ; Fall       ; Funct[0]        ;
+;  RegSrc[1] ; Funct[0]   ; 3.360 ; 3.360 ; Fall       ; Funct[0]        ;
+; RegW       ; Funct[0]   ; 4.520 ; 4.520 ; Fall       ; Funct[0]        ;
+; ALUScr     ; Funct[1]   ; 4.605 ; 4.605 ; Rise       ; Funct[1]        ;
+; ALUop      ; Funct[1]   ; 4.467 ; 4.467 ; Rise       ; Funct[1]        ;
+; Branch     ; Funct[1]   ; 4.570 ; 4.570 ; Rise       ; Funct[1]        ;
+; ImmSrc[*]  ; Funct[1]   ; 4.359 ; 4.359 ; Rise       ; Funct[1]        ;
+;  ImmSrc[0] ; Funct[1]   ; 4.359 ; 4.359 ; Rise       ; Funct[1]        ;
+;  ImmSrc[1] ; Funct[1]   ; 4.495 ; 4.495 ; Rise       ; Funct[1]        ;
+; MemtoReg   ; Funct[1]   ; 4.428 ; 4.428 ; Rise       ; Funct[1]        ;
+; Memw       ; Funct[1]   ; 4.548 ; 4.548 ; Rise       ; Funct[1]        ;
+; RegSrc[*]  ; Funct[1]   ; 3.319 ; 3.319 ; Rise       ; Funct[1]        ;
+;  RegSrc[0] ; Funct[1]   ; 4.580 ; 4.580 ; Rise       ; Funct[1]        ;
+;  RegSrc[1] ; Funct[1]   ; 3.319 ; 3.319 ; Rise       ; Funct[1]        ;
+; RegW       ; Funct[1]   ; 4.565 ; 4.565 ; Rise       ; Funct[1]        ;
+; ALUScr     ; Funct[1]   ; 4.654 ; 4.654 ; Fall       ; Funct[1]        ;
+; ALUop      ; Funct[1]   ; 4.516 ; 4.516 ; Fall       ; Funct[1]        ;
+; Branch     ; Funct[1]   ; 4.619 ; 4.619 ; Fall       ; Funct[1]        ;
+; MemtoReg   ; Funct[1]   ; 4.477 ; 4.477 ; Fall       ; Funct[1]        ;
+; Memw       ; Funct[1]   ; 4.597 ; 4.597 ; Fall       ; Funct[1]        ;
+; RegSrc[*]  ; Funct[1]   ; 3.456 ; 3.456 ; Fall       ; Funct[1]        ;
+;  RegSrc[0] ; Funct[1]   ; 4.629 ; 4.629 ; Fall       ; Funct[1]        ;
+;  RegSrc[1] ; Funct[1]   ; 3.456 ; 3.456 ; Fall       ; Funct[1]        ;
+; RegW       ; Funct[1]   ; 4.614 ; 4.614 ; Fall       ; Funct[1]        ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; Funct[0]   ; Funct[0] ; 12       ; 12       ; 12       ; 12       ;
+; Funct[1]   ; Funct[0] ; 10       ; 10       ; 10       ; 10       ;
+; Funct[0]   ; Funct[1] ; 12       ; 12       ; 12       ; 12       ;
+; Funct[1]   ; Funct[1] ; 11       ; 11       ; 10       ; 10       ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; Funct[0]   ; Funct[0] ; 12       ; 12       ; 12       ; 12       ;
+; Funct[1]   ; Funct[0] ; 10       ; 10       ; 10       ; 10       ;
+; Funct[0]   ; Funct[1] ; 12       ; 12       ; 12       ; 12       ;
+; Funct[1]   ; Funct[1] ; 11       ; 11       ; 10       ; 10       ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 18    ; 18   ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 10    ; 10   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Mar 12 15:22:22 2021
+Info: Command: quartus_sta control -c control
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 9 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'control.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name Funct[0] Funct[0]
+    Info (332105): create_clock -period 1.000 -name Funct[1] Funct[1]
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: Mux23~0  from: datac  to: combout
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.035
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.035        -0.035 Funct[1] 
+    Info (332119):     0.028         0.000 Funct[0] 
+Info (332146): Worst-case hold slack is -1.567
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.567        -8.921 Funct[1] 
+    Info (332119):    -1.198        -6.418 Funct[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -1.380 Funct[0] 
+    Info (332119):    -1.222        -1.612 Funct[1] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: Mux23~0  from: datac  to: combout
+Info (332146): Worst-case setup slack is 0.255
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.255         0.000 Funct[0] 
+    Info (332119):     0.443         0.000 Funct[1] 
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case hold slack is -0.959
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.959        -5.565 Funct[1] 
+    Info (332119):    -0.761        -4.023 Funct[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -1.380 Funct[0] 
+    Info (332119):    -1.222        -1.222 Funct[1] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4549 megabytes
+    Info: Processing ended: Fri Mar 12 15:22:23 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

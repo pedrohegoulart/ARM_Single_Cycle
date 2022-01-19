@@ -1,0 +1,75 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Pichau\Desktop\ARM Sicle Cycle\condcheck - Testbench\simulation\modelsim
+Econdcheck
+Z1 w1615499807
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\Pichau\Desktop\ARM Sicle Cycle\condcheck - Testbench\simulation\modelsim
+Z5 8C:/Users/Pichau/Desktop/ARM Sicle Cycle/condcheck - Testbench/condcheck.vhd
+Z6 FC:/Users/Pichau/Desktop/ARM Sicle Cycle/condcheck - Testbench/condcheck.vhd
+l0
+L3
+VFfXOe<i8bPJH[n>YcDB241
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1615592840.388000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pichau/Desktop/ARM Sicle Cycle/condcheck - Testbench/condcheck.vhd|
+Z10 !s107 C:/Users/Pichau/Desktop/ARM Sicle Cycle/condcheck - Testbench/condcheck.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 l_;RiASCQR1nKo[offG2i0
+!i10b 1
+Abehave
+R2
+R3
+DEx4 work 9 condcheck 0 22 FfXOe<i8bPJH[n>YcDB241
+l15
+L11
+VZ=2jlTeMdI<EK3Y5ZfTMV0
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 XNbCmn>oPSOZ:cX67O;0n0
+!i10b 1
+Etb_condcheck
+Z13 w1615575873
+R2
+R3
+R4
+Z14 8C:/Users/Pichau/Desktop/ARM Sicle Cycle/condcheck - Testbench/tb_condcheck.vhd
+Z15 FC:/Users/Pichau/Desktop/ARM Sicle Cycle/condcheck - Testbench/tb_condcheck.vhd
+l0
+L4
+VzhX`SbAgdnoS^SW?_K=[X3
+!s100 FSz44MdmN2:>J`gWAT?T01
+R7
+31
+!i10b 1
+Z16 !s108 1615592840.589000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pichau/Desktop/ARM Sicle Cycle/condcheck - Testbench/tb_condcheck.vhd|
+Z18 !s107 C:/Users/Pichau/Desktop/ARM Sicle Cycle/condcheck - Testbench/tb_condcheck.vhd|
+R11
+R12
+Ateste
+R2
+R3
+DEx4 work 12 tb_condcheck 0 22 zhX`SbAgdnoS^SW?_K=[X3
+l27
+L7
+Viz4ccnmahhSAfeW[[UlXM3
+!s100 2?HjE36Wz^=_9JfmXLhKF3
+R7
+31
+!i10b 1
+R16
+R17
+R18
+R11
+R12

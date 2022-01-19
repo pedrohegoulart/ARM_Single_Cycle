@@ -1,0 +1,51 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+ 
+entity tb_AlvarezPajaro_ALU is 
+end tb_AlvarezPajaro_ALU;
+ 
+architecture behavior of tb_AlvarezPajaro_ALU is
+
+component AlvarezPajaro_ALU is
+
+	port(
+        signal OPCODE : in std_logic_vector(3 downto 0); 		-- Seletor da ALU
+        signal SHAMT : in std_logic_vector(4 downto 0);			-- Valor inteiro (No caso para deslocamento)
+        signal X, Y : in std_logic_vector(31 downto 0); 			-- Parametros de trabalho
+        signal Z : out std_logic;										--	Verificador de Result: 0x0000 = 1, 0x001* = 0
+        signal R, LO, HI : out std_logic_vector(31 downto 0)	-- Resultado e variaveis Aux. de resultado.
+    );
+
+end component;
+ 
+--Entradas
+signal x 		: std_logic_vector(31 downto 0); 
+signal y 		: std_logic_vector(31 downto 0);
+signal opcode 	: std_logic_vector(3 downto 0);
+signal shamt 	: std_logic_vector(4 downto 0); 
+ 
+--Saidas
+signal z 	: std_logic;
+signal r 	: std_logic_vector(31 downto 0);
+signal lo 	: std_logic_vector(31 downto 0);
+signal hi 	: std_logic_vector(31 downto 0);
+  
+--Instancia de testbench
+begin
+testbench: AlvarezPajaro_ALU port map (
+OPCODE => opcode,
+SHAMT => shamt,
+X => x,
+Y => y,
+Z => z,
+R => r,
+LO => lo,
+HI => hi
+);
+ 
+-- Enviando valores
+x <= x"000005FA", x"0000F851" after 10 ns, x"00006FD1" after 20 ns; 
+y <= x"0000001C", x"00000063" after 20 ns, x"0000000E" after 30 ns;
+opcode <= x"1";
+	   
+end behavior;

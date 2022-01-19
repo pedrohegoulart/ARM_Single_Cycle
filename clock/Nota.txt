@@ -1,0 +1,5 @@
+Projeto do Clock criado:
+-Pronto Testbench
+-Sem Linkcagem (Não Precisa)
+
+*Entrada pelo tesbench e precisda comentar

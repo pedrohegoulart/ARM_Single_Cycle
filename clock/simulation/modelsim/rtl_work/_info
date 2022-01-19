@@ -1,0 +1,77 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Pichau\Desktop\ARM Sicle Cycle\clock - Testbench\simulation\modelsim
+Eclock
+Z1 w1615484224
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\Pichau\Desktop\ARM Sicle Cycle\clock - Testbench\simulation\modelsim
+Z6 8C:/Users/Pichau/Desktop/ARM Sicle Cycle/clock - Testbench/clock.vhd
+Z7 FC:/Users/Pichau/Desktop/ARM Sicle Cycle/clock - Testbench/clock.vhd
+l0
+L8
+V>92W06:GWak]nJSOPbDeV2
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1615592709.528000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pichau/Desktop/ARM Sicle Cycle/clock - Testbench/clock.vhd|
+Z11 !s107 C:/Users/Pichau/Desktop/ARM Sicle Cycle/clock - Testbench/clock.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 G6noL]GFKkdGQzQ0eh?h63
+!i10b 1
+Abehavior
+R2
+R3
+R4
+DEx4 work 5 clock 0 22 >92W06:GWak]nJSOPbDeV2
+l22
+L16
+VDlEg17@h_ohN]50U_5B`S0
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 9BEnkI0V2ogO0EP^]kTW11
+!i10b 1
+Etb_clock
+Z14 w1615484130
+R3
+R4
+R5
+Z15 8C:/Users/Pichau/Desktop/ARM Sicle Cycle/clock - Testbench/tb_clock.vhd
+Z16 FC:/Users/Pichau/Desktop/ARM Sicle Cycle/clock - Testbench/tb_clock.vhd
+l0
+L4
+V7>TYFdT]DOT6NSkedPBS80
+!s100 49`@O?>;hNL@g5oa5@Xam3
+R8
+31
+!i10b 1
+Z17 !s108 1615592709.726000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pichau/Desktop/ARM Sicle Cycle/clock - Testbench/tb_clock.vhd|
+Z19 !s107 C:/Users/Pichau/Desktop/ARM Sicle Cycle/clock - Testbench/tb_clock.vhd|
+R12
+R13
+Ateste
+R3
+R4
+DEx4 work 8 tb_clock 0 22 7>TYFdT]DOT6NSkedPBS80
+l21
+L7
+V<7J89>Hi1hlmG5GLA9m?<1
+!s100 XlTa;]:WmXimARoCV?Ac]1
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

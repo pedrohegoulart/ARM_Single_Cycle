@@ -1,0 +1,13 @@
+|registrador_cond
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+reset => q[0]~reg0.ACLR
+reset => q[1]~reg0.ACLR
+en => q[1]~reg0.ENA
+en => q[0]~reg0.ENA
+d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,26 @@
+-- PC LOGIC
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+entity pc_logic is 
+    port(
+			signal Branch, RegW : in std_logic;			
+			signal RD  : in std_logic_vector(3 downto 0);			
+			signal PCS: out STD_LOGIC 
+	 );
+end entity pc_logic;
+
+architecture teste of pc_logic is
+
+	begin
+	
+	variable aux : STD_LOGIC;
+	
+		 begin
+			
+			aux <= ((RD = ) and RegW) or Branch;
+			PCS <= std_logic_vector(aux);
+
+
+end architecture teste;

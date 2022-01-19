@@ -1,0 +1,77 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Pichau\Desktop\ARM Sicle Cycle\data_memory - Testbench\simulation\modelsim
+Edata_memory
+Z1 w1615437197
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\Pichau\Desktop\ARM Sicle Cycle\data_memory - Testbench\simulation\modelsim
+Z6 8C:/Users/Pichau/Desktop/ARM Sicle Cycle/data_memory - Testbench/data_memory.vhd
+Z7 FC:/Users/Pichau/Desktop/ARM Sicle Cycle/data_memory - Testbench/data_memory.vhd
+l0
+L8
+VM3zOUF_N4WL;];35EeiOI1
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1615593381.848000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pichau/Desktop/ARM Sicle Cycle/data_memory - Testbench/data_memory.vhd|
+Z11 !s107 C:/Users/Pichau/Desktop/ARM Sicle Cycle/data_memory - Testbench/data_memory.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 0N2[j9Va<jmIKDEk`?XjJ0
+!i10b 1
+Abehavior
+R2
+R3
+R4
+DEx4 work 11 data_memory 0 22 M3zOUF_N4WL;];35EeiOI1
+l21
+L17
+VZBE<Y2J0CNYA@8c3cPJTj2
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 V[8;=Qd4i`h4:EJ5[nIJO3
+!i10b 1
+Etb_data_memory
+Z14 w1615582218
+R3
+R4
+R5
+Z15 8C:/Users/Pichau/Desktop/ARM Sicle Cycle/data_memory - Testbench/tb_data_memory.vhd
+Z16 FC:/Users/Pichau/Desktop/ARM Sicle Cycle/data_memory - Testbench/tb_data_memory.vhd
+l0
+L4
+VUNnYjl4@6Qd_N`YHTQigM2
+!s100 TN[Z4?Cl]S3Qc17U=BeC13
+R8
+31
+!i10b 1
+Z17 !s108 1615593382.047000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pichau/Desktop/ARM Sicle Cycle/data_memory - Testbench/tb_data_memory.vhd|
+Z19 !s107 C:/Users/Pichau/Desktop/ARM Sicle Cycle/data_memory - Testbench/tb_data_memory.vhd|
+R12
+R13
+Ateste
+R3
+R4
+DEx4 work 14 tb_data_memory 0 22 UNnYjl4@6Qd_N`YHTQigM2
+l30
+L7
+V21<6>=1El[nCB5kR=SFzd2
+!s100 DlP7H9`=zTC@BESJj0OF>0
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

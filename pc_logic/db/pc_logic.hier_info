@@ -1,0 +1,10 @@
+|pc_logic
+Branch => aux.IN1
+RegW => aux.IN0
+RD[0] => aux.IN1
+RD[1] => ~NO_FANOUT~
+RD[2] => ~NO_FANOUT~
+RD[3] => ~NO_FANOUT~
+PCS <= aux.DB_MAX_OUTPUT_PORT_TYPE
+
+

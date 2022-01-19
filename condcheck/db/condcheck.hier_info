@@ -1,0 +1,13 @@
+|condcheck
+Cond[0] => ~NO_FANOUT~
+Cond[1] => Mux0.IN5
+Cond[2] => Mux0.IN4
+Cond[3] => ~NO_FANOUT~
+Flags[0] => ge.IN0
+Flags[1] => CondEx.IN0
+Flags[2] => CondEx.IN1
+Flags[2] => CondEx.IN1
+Flags[3] => ge.IN1
+CondEx <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

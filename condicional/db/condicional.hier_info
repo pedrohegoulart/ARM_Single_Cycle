@@ -1,0 +1,61 @@
+|condicional
+PCS => PCSrc.IN1
+RegW => RegWrite.IN1
+NoWrite => RegWrite.IN1
+MemW => MemWrite.IN1
+Clk => registrador_cond:flipflop1.clk
+Clk => registrador_cond:flipflop0.clk
+FlagW[0] => flagwrite[0].IN1
+FlagW[1] => flagwrite[1].IN1
+Cond_O[0] => condcheck:check.Cond[0]
+Cond_O[1] => condcheck:check.Cond[1]
+Cond_O[2] => condcheck:check.Cond[2]
+Cond_O[3] => condcheck:check.Cond[3]
+ALUFlags[0] => registrador_cond:flipflop0.d[0]
+ALUFlags[1] => registrador_cond:flipflop0.d[1]
+ALUFlags[2] => registrador_cond:flipflop1.d[0]
+ALUFlags[3] => registrador_cond:flipflop1.d[1]
+PCSrc <= PCSrc.DB_MAX_OUTPUT_PORT_TYPE
+RegWrite <= RegWrite.DB_MAX_OUTPUT_PORT_TYPE
+MemWrite <= MemWrite.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|condicional|registrador_cond:flipflop1
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+reset => q[0]~reg0.ACLR
+reset => q[1]~reg0.ACLR
+en => q[1]~reg0.ENA
+en => q[0]~reg0.ENA
+d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|condicional|registrador_cond:flipflop0
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+reset => q[0]~reg0.ACLR
+reset => q[1]~reg0.ACLR
+en => q[1]~reg0.ENA
+en => q[0]~reg0.ENA
+d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|condicional|condcheck:check
+Cond[0] => ~NO_FANOUT~
+Cond[1] => Mux0.IN5
+Cond[2] => Mux0.IN4
+Cond[3] => ~NO_FANOUT~
+Flags[0] => ge.IN0
+Flags[1] => CondEx.IN0
+Flags[2] => CondEx.IN1
+Flags[2] => CondEx.IN1
+Flags[3] => ge.IN1
+CondEx <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

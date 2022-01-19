@@ -1,0 +1,433 @@
+Analysis & Synthesis report for data_memory
+Fri Mar 12 20:54:50 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Mar 12 20:54:50 2021           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; data_memory                                     ;
+; Top-level Entity Name              ; data_memory                                     ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 3,499                                           ;
+;     Total combinational functions  ; 1,451                                           ;
+;     Dedicated logic registers      ; 2,048                                           ;
+; Total registers                    ; 2048                                            ;
+; Total pins                         ; 99                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; data_memory        ; data_memory        ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
+; data_memory.vhd                  ; yes             ; User VHDL File  ; C:/Users/Pichau/Desktop/ARM Sicle Cycle/data_memory - Testbench/data_memory.vhd ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 3,499 ;
+;                                             ;       ;
+; Total combinational functions               ; 1451  ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 1410  ;
+;     -- 3 input functions                    ; 33    ;
+;     -- <=2 input functions                  ; 8     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 1451  ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 2048  ;
+;     -- Dedicated logic registers            ; 2048  ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 99    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; CLK   ;
+; Maximum fan-out                             ; 2048  ;
+; Total fan-out                               ; 11931 ;
+; Average fan-out                             ; 3.32  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |data_memory               ; 1451 (1451)       ; 2048 (2048)  ; 0           ; 0            ; 0       ; 0         ; 99   ; 0            ; |data_memory        ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; DATAOUT[0]$latch                                    ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[1]$latch                                    ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[2]$latch                                    ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[3]$latch                                    ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[4]$latch                                    ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[5]$latch                                    ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[6]$latch                                    ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[7]$latch                                    ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[8]$latch                                    ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[9]$latch                                    ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[10]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[11]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[12]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[13]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[14]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[15]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[16]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[17]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[18]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[19]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[20]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[21]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[22]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[23]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[24]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[25]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[26]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[27]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[28]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[29]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[30]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; DATAOUT[31]$latch                                   ; DATAOUT[31]         ; yes                    ;
+; Number of user-specified and inferred latches = 32  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2048  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2048  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 64:1               ; 32 bits   ; 1344 LEs      ; 1344 LEs             ; 0 LEs                  ; No         ; |data_memory|Mux2075       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:07     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Mar 12 20:54:40 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off data_memory -c data_memory
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file data_memory.vhd
+    Info (12022): Found design unit 1: data_memory-behavior
+    Info (12023): Found entity 1: data_memory
+Info (12021): Found 2 design units, including 1 entities, in source file tb_data_memory.vhd
+    Info (12022): Found design unit 1: tb_data_memory-teste
+    Info (12023): Found entity 1: tb_data_memory
+Info (12127): Elaborating entity "data_memory" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(422): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(425): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(428): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(431): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(434): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(437): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(440): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(443): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(446): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(449): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(452): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(455): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(458): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(461): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(464): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(467): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(470): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(473): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(476): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(479): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(482): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(485): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(488): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(491): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(494): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(497): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(500): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(503): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(506): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(509): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(512): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(515): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(518): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(521): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(524): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(527): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(530): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(533): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(536): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(539): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(542): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(545): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(548): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(551): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(554): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(557): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(560): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(563): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(566): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(569): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(572): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(575): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(578): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(581): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(584): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(587): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(590): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(593): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(596): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(599): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(602): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(605): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(608): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(611): signal "dataMemory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at data_memory.vhd(417): inferring latch(es) for signal or variable "DATAOUT", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "DATAOUT[0]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[1]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[2]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[3]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[4]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[5]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[6]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[7]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[8]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[9]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[10]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[11]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[12]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[13]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[14]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[15]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[16]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[17]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[18]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[19]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[20]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[21]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[22]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[23]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[24]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[25]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[26]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[27]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[28]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[29]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[30]" at data_memory.vhd(417)
+Info (10041): Inferred latch for "DATAOUT[31]" at data_memory.vhd(417)
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 24 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ADDRESS[8]"
+    Warning (15610): No output dependent on input pin "ADDRESS[9]"
+    Warning (15610): No output dependent on input pin "ADDRESS[10]"
+    Warning (15610): No output dependent on input pin "ADDRESS[11]"
+    Warning (15610): No output dependent on input pin "ADDRESS[12]"
+    Warning (15610): No output dependent on input pin "ADDRESS[13]"
+    Warning (15610): No output dependent on input pin "ADDRESS[14]"
+    Warning (15610): No output dependent on input pin "ADDRESS[15]"
+    Warning (15610): No output dependent on input pin "ADDRESS[16]"
+    Warning (15610): No output dependent on input pin "ADDRESS[17]"
+    Warning (15610): No output dependent on input pin "ADDRESS[18]"
+    Warning (15610): No output dependent on input pin "ADDRESS[19]"
+    Warning (15610): No output dependent on input pin "ADDRESS[20]"
+    Warning (15610): No output dependent on input pin "ADDRESS[21]"
+    Warning (15610): No output dependent on input pin "ADDRESS[22]"
+    Warning (15610): No output dependent on input pin "ADDRESS[23]"
+    Warning (15610): No output dependent on input pin "ADDRESS[24]"
+    Warning (15610): No output dependent on input pin "ADDRESS[25]"
+    Warning (15610): No output dependent on input pin "ADDRESS[26]"
+    Warning (15610): No output dependent on input pin "ADDRESS[27]"
+    Warning (15610): No output dependent on input pin "ADDRESS[28]"
+    Warning (15610): No output dependent on input pin "ADDRESS[29]"
+    Warning (15610): No output dependent on input pin "ADDRESS[30]"
+    Warning (15610): No output dependent on input pin "ADDRESS[31]"
+Info (21057): Implemented 3598 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 67 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 3499 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 91 warnings
+    Info: Peak virtual memory: 4750 megabytes
+    Info: Processing ended: Fri Mar 12 20:54:50 2021
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:10
+
+

@@ -1,0 +1,4 @@
+Projeto do Shift (Deslocador) criado
+-Sem Testbench
+-Sem Linkcagem (Não Precisa)
+

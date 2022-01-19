@@ -1,0 +1,75 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Pichau\Desktop\ARM Sicle Cycle\condicional - Testbench\simulation\modelsim
+Econdicional
+Z1 w1615505335
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\Pichau\Desktop\ARM Sicle Cycle\condicional - Testbench\simulation\modelsim
+Z5 8C:/Users/Pichau/Desktop/ARM Sicle Cycle/condicional - Testbench/condicional.vhd
+Z6 FC:/Users/Pichau/Desktop/ARM Sicle Cycle/condicional - Testbench/condicional.vhd
+l0
+L6
+VITYAUalVY;hUELOBmK`0W3
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1615593036.778000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pichau/Desktop/ARM Sicle Cycle/condicional - Testbench/condicional.vhd|
+Z10 !s107 C:/Users/Pichau/Desktop/ARM Sicle Cycle/condicional - Testbench/condicional.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 D5[W7a>WVPW_2cBE9k=4a2
+!i10b 1
+Ateste
+R2
+R3
+DEx4 work 11 condicional 0 22 ITYAUalVY;hUELOBmK`0W3
+l39
+L15
+V@8_ggLh_?<=XzEN>B=Pz`3
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 KgUSAA?HE2dHEoYb1OIeB3
+!i10b 1
+Etb_condicional
+Z13 w1615564970
+R2
+R3
+R4
+Z14 8C:/Users/Pichau/Desktop/ARM Sicle Cycle/condicional - Testbench/tb_condicional.vhd
+Z15 FC:/Users/Pichau/Desktop/ARM Sicle Cycle/condicional - Testbench/tb_condicional.vhd
+l0
+L4
+VOV2X??6aBoPiLNb70^E8z0
+!s100 _On=7gO`Ga2JWoi]1WGo52
+R7
+31
+!i10b 1
+Z16 !s108 1615593036.979000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pichau/Desktop/ARM Sicle Cycle/condicional - Testbench/tb_condicional.vhd|
+Z18 !s107 C:/Users/Pichau/Desktop/ARM Sicle Cycle/condicional - Testbench/tb_condicional.vhd|
+R11
+R12
+Ateste
+R2
+R3
+DEx4 work 14 tb_condicional 0 22 OV2X??6aBoPiLNb70^E8z0
+l25
+L7
+V<^zL6fz?7OaFi[>6K;WSK0
+!s100 zbVGh8ocmKI>G]S:]7@n^3
+R7
+31
+!i10b 1
+R16
+R17
+R18
+R11
+R12

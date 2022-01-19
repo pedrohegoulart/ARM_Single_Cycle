@@ -1,0 +1,75 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Pichau\Desktop\ARM Sicle Cycle\registrador_cond - Testbench\simulation\modelsim
+Eregistrador_cond
+Z1 w1615498768
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\Pichau\Desktop\ARM Sicle Cycle\registrador_cond - Testbench\simulation\modelsim
+Z5 8C:/Users/Pichau/Desktop/ARM Sicle Cycle/registrador_cond - Testbench/registrador_cond.vhd
+Z6 FC:/Users/Pichau/Desktop/ARM Sicle Cycle/registrador_cond - Testbench/registrador_cond.vhd
+l0
+L3
+VmBZ6VBY;;]:9;nSYe[Af43
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1615594364.566000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pichau/Desktop/ARM Sicle Cycle/registrador_cond - Testbench/registrador_cond.vhd|
+Z10 !s107 C:/Users/Pichau/Desktop/ARM Sicle Cycle/registrador_cond - Testbench/registrador_cond.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 lPRh;fbjKzghKcX3ZBYAF1
+!i10b 1
+Ateste
+R2
+R3
+DEx4 work 16 registrador_cond 0 22 mBZ6VBY;;]:9;nSYe[Af43
+l13
+L11
+V56oMfa@;ih^0VmKHOSzBL2
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 ?;8_HKPCBK0_QYbQTO5P40
+!i10b 1
+Etb_registrador_cond
+Z13 w1615580291
+R2
+R3
+R4
+Z14 8C:/Users/Pichau/Desktop/ARM Sicle Cycle/registrador_cond - Testbench/tb_registrador_cond.vhd
+Z15 FC:/Users/Pichau/Desktop/ARM Sicle Cycle/registrador_cond - Testbench/tb_registrador_cond.vhd
+l0
+L4
+VUl9:fECkgm@>@Ncga:0NC0
+!s100 ]h7lHZDW@nZ^6oz9h5Mhg2
+R7
+31
+!i10b 1
+Z16 !s108 1615594364.762000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pichau/Desktop/ARM Sicle Cycle/registrador_cond - Testbench/tb_registrador_cond.vhd|
+Z18 !s107 C:/Users/Pichau/Desktop/ARM Sicle Cycle/registrador_cond - Testbench/tb_registrador_cond.vhd|
+R11
+R12
+Ateste
+R2
+R3
+DEx4 work 19 tb_registrador_cond 0 22 Ul9:fECkgm@>@Ncga:0NC0
+l30
+L7
+VG1IzH0CnRloVaUmNjM:6J3
+!s100 6dP;il0?V?g4kJOfMfmH`1
+R7
+31
+!i10b 1
+R16
+R17
+R18
+R11
+R12

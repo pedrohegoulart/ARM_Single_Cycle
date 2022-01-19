@@ -1,0 +1,82 @@
+-- ALU control
+
+library ieee;
+--
+-- Controle da ALU referente a tabela Verdade anteriormente Tabelada
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+
+entity AlvarezPajaro_ALUcontrol is
+    port(
+        signal ALUOP : in std_logic_vector(1 downto 0);
+        signal FUNCT : in std_logic_vector(5 downto 0);
+        signal OPCODE : out std_logic_vector(3 downto 0)	-- Saída Opcode para ALU
+    );
+end entity AlvarezPajaro_ALUcontrol;
+
+
+architecture behavior of AlvarezPajaro_ALUcontrol is 
+    begin
+
+        process(ALUOP, FUNCT)
+            begin
+
+                case ALUOP is		-- Controles enviados devido a tabela verdade
+                    when "00" => -- Adição
+                        OPCODE <= "0001";
+
+                    when "01" => -- Subtração
+                        OPCODE <= "0010";
+
+                    when "10" => -- Operação Menor 
+                        OPCODE <= "1101";
+
+                    when "11" => -- Escolhemos variados de função
+                        case FUNCT is
+                            when "100000" => -- 20h
+                                OPCODE <= "0001"; -- Código para Adição
+
+                            when "100010" => -- 22h
+                                OPCODE <= "0010"; -- Código para Subtração                                
+
+                            when "011000" => -- 18h
+                                OPCODE <= "0011"; -- Código para Multiplicação
+
+                            when "011010" => -- 1ah
+                                OPCODE <= "0100"; -- div Código para Divisão
+
+                            when "100100" => -- 24h
+                                OPCODE <= "0101"; -- Código para AND
+
+                            when "100101" => -- 25h
+                                OPCODE <= "0110"; -- Código para OR
+
+                            when "100111" => -- 27h
+                                OPCODE <= "0111"; -- Código para NOR
+
+                            when "100110" => -- 26h
+                                OPCODE <= "1000"; -- Código para XOR
+
+                            when "000000" => -- 00h
+                                OPCODE <= "1001"; -- Código para Desl. Esq.
+
+                            when "000010" => -- 02h
+                                OPCODE <= "1010"; -- Código para Desl. Dir.
+
+                            when "000100" => -- 04h
+                                OPCODE <= "1011"; -- Código para Rot. Esq.
+
+                            when "000110" => -- 06h
+                                OPCODE <= "1100"; -- Código para Rot. Dir.
+
+                            when "101010" => --2ah
+                                OPCODE <= "1101"; -- slt
+
+                            when others => null;
+                        end case;
+
+                    when others => null;
+                end case;
+        end process;
+end architecture behavior;

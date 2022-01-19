@@ -1,0 +1,38 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+ 
+entity tb_AlvarezPajaro_ALUcontrol is 
+end tb_AlvarezPajaro_ALUcontrol;
+ 
+architecture behavior of tb_AlvarezPajaro_ALUcontrol is
+
+component AlvarezPajaro_ALUcontrol is
+
+	port(
+        signal ALUOP : in std_logic_vector(1 downto 0);
+        signal FUNCT : in std_logic_vector(5 downto 0);
+        signal OPCODE : out std_logic_vector(3 downto 0)	-- Saída Opcode para ALU
+    );
+
+end component;
+ 
+--Entradas
+signal aluop_a 		: std_logic_vector(1 downto 0); 
+signal funct_a 		: std_logic_vector(5 downto 0);
+ 
+--Saidas
+signal opcode_a 	: std_logic_vector(3 downto 0);
+  
+--Instancia de testbench
+begin
+testbench: AlvarezPajaro_ALUcontrol port map (
+ALUOP  => aluop_a,
+FUNCT  => funct_a,
+OPCODE => opcode_a
+);
+ 
+-- Enviando valores
+aluop_a <= "01", "00" after 30 ns, "11" after 60 ns;--, "00" after 20 ns, "11" after 60 ns;--, "00" after 10 ns,"10" after 30 ns,"11" after 100 ns;
+funct_a <= "100100", "011010" after 100 ns;--, "000010" after 40 ns;--,"100000" after 20 ns, "100010" after 20 ns,"011000" after 20 ns;--,"011010" after 20 ns,"100100" after 20 ns;
+	   
+end behavior;

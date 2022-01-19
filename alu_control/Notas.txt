@@ -1,0 +1,4 @@
+Projeto do ALU Control:
+-Problema no Testbench (Quatidade ou tempo teste de envio de dados)
+-Sem Linkcagem (Não Precisa)
+

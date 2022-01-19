@@ -1,0 +1,33 @@
+|clock
+clk_1khz => clk.CLK
+clk_1khz => counter[0].CLK
+clk_1khz => counter[1].CLK
+clk_1khz => counter[2].CLK
+clk_1khz => counter[3].CLK
+clk_1khz => counter[4].CLK
+clk_1khz => counter[5].CLK
+clk_1khz => counter[6].CLK
+clk_1khz => counter[7].CLK
+clk_1khz => counter[8].CLK
+clk_1khz => counter[9].CLK
+clk_1khz => counter[10].CLK
+clk_1khz => counter[11].CLK
+clk_1khz => counter[12].CLK
+clk_1khz => counter[13].CLK
+clk_1khz => counter[14].CLK
+clk_1khz => counter[15].CLK
+clk_1khz => counter[16].CLK
+clk_1khz => counter[17].CLK
+clk_1khz => counter[18].CLK
+clk_1khz => counter[19].CLK
+clk_1khz => counter[20].CLK
+clk_1khz => counter[21].CLK
+clk_1khz => counter[22].CLK
+clk_1khz => counter[23].CLK
+clk_1khz => counter[24].CLK
+clk_1khz => counter[25].CLK
+clk_1khz => counter[26].CLK
+clk_1khz => counter[27].CLK
+clk_1HZ <= clk.DB_MAX_OUTPUT_PORT_TYPE
+
+

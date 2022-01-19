@@ -1,0 +1,25 @@
+LIBRARY IEEE;
+use ieee.std_logic_1164.all;
+
+entity tb_AlvarezPajaro_1HzClock2 is
+end tb_AlvarezPajaro_1HzClock2;
+
+architecture teste of tb_AlvarezPajaro_1HzClock2 is
+
+component AlvarezPajaro_1HzClock2 is
+	port(
+	    signal CLK_50MHZ : in std_logic;
+	    signal CLK_1HZ : out std_logic
+    );
+end component; 
+
+constant PERIODO : time := 1000000 ns;
+
+signal  Clk_50: std_logic := '0';
+signal  Clk_1: std_logic := '0';
+
+begin
+instancia_clock: AlvarezPajaro_1HzClock2 port map(CLK_50MHZ=> Clk_50, CLK_1HZ=>Clk_1);
+Clk_50    <= not Clk_50 after PERIODO/2;
+
+end teste; 

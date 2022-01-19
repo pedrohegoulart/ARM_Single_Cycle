@@ -1,0 +1,28 @@
+LIBRARY IEEE;
+use ieee.std_logic_1164.all;
+
+entity tb_condicional is
+end tb_condicional;
+
+architecture teste of tb_condicional is
+
+component clock is
+	port(
+			signal PCS, RegW, NoWrite, MemW, Clk : in std_logic;
+			signal FlagW  : in std_logic_vector(1 downto 0);
+			signal Cond_O, ALUFlags  : in std_logic_vector(3 downto 0);
+			signal PCSrc, RegWrite, MemWrite: out STD_LOGIC 
+	 );
+end component; 
+
+constant PERIODO : time := 1 ms; -- 1000HZ
+
+signal clk, pcsr, regwrit, memwrit, pcs, reg, nowrit, mem: std_logic;
+signal cond, aluflag  : std_logic_vector(3 downto 0);
+signal flagw  : std_logic_vector(1 downto 0);
+
+begin
+
+instancia_condicional: condicional port map();
+
+end architecture teste;

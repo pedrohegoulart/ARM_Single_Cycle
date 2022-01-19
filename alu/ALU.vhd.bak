@@ -1,0 +1,52 @@
+-- ALU
+-- Unidade Lógica Aritmetica
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+
+entity ALU is
+    port(
+        signal OPCODE : in std_logic_vector(1 downto 0); 		-- Seletor da ALU
+        signal SHAMT : in std_logic_vector(4 downto 0);			-- Valor inteiro (No caso para deslocamento)
+        signal X, Y : in std_logic_vector(31 downto 0); 			-- Parametros de trabalho
+        signal R : out std_logic_vector(31 downto 0)				-- Resultado e variaveis Aux. de resultado.
+    );
+end entity ALU;
+
+
+architecture structure of ALU is
+    
+    begin
+
+        operation : process(OPCODE, X, Y) -- Variaveis de Processo
+            
+				-- Variaveis locais
+            variable result : std_logic_vector(31 downto 0);	-- 32-bits
+
+            begin
+                case OPCODE is		-- Funciona como um switch case
+                    when "00" =>	-- Adição 
+                        result := std_logic_vector(signed(X) + signed(Y));
+
+                    when "01" =>	-- Operador Lógico XOR (Exclusivo)
+                        result := X xor Y;
+
+                    when "10" =>	-- Deslocamento Logico para a Esquerda 
+                        result := std_logic_vector(signed(Y) sll to_integer(unsigned(SHAMT)));
+
+                    when "11" =>	-- Logica de SE  é Menor
+                        if signed(X) < signed(Y) then
+                            result := X"00000001";
+                        else 
+                            result := (others => '0');
+                        end if;
+                        
+                    when others => null;
+                end case;
+
+                R <= result;	-- Resulta da operação selecionada
+        end process;
+
+end architecture structure;

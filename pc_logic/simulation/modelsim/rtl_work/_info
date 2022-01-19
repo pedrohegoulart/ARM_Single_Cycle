@@ -1,0 +1,75 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Pichau\Desktop\ARM Sicle Cycle\pc_logic - Testbench\simulation\modelsim
+Epc_logic
+Z1 w1615529658
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\Pichau\Desktop\ARM Sicle Cycle\pc_logic - Testbench\simulation\modelsim
+Z5 8C:/Users/Pichau/Desktop/ARM Sicle Cycle/pc_logic - Testbench/pc_logic.vhd
+Z6 FC:/Users/Pichau/Desktop/ARM Sicle Cycle/pc_logic - Testbench/pc_logic.vhd
+l0
+L6
+VF24SlIge[j:]SQeh=N7MJ2
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1615593989.220000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pichau/Desktop/ARM Sicle Cycle/pc_logic - Testbench/pc_logic.vhd|
+Z10 !s107 C:/Users/Pichau/Desktop/ARM Sicle Cycle/pc_logic - Testbench/pc_logic.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 LCF`49;X@L4SE92H:K4]`0
+!i10b 1
+Ateste
+R2
+R3
+DEx4 work 8 pc_logic 0 22 F24SlIge[j:]SQeh=N7MJ2
+l20
+L14
+VIhXaTY7SzS9YMEPAN@;0R1
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 eo7jEg2Ea3OJ:Yfe428RU2
+!i10b 1
+Etb_pc_logic
+Z13 w1615577722
+R2
+R3
+R4
+Z14 8C:/Users/Pichau/Desktop/ARM Sicle Cycle/pc_logic - Testbench/tb_pc_logic.vhd
+Z15 FC:/Users/Pichau/Desktop/ARM Sicle Cycle/pc_logic - Testbench/tb_pc_logic.vhd
+l0
+L4
+V77U@oNnJXlM92R9A3DUNV3
+!s100 I5Lf;4SbKHiHMCDc:=TCd3
+R7
+31
+!i10b 1
+Z16 !s108 1615593989.421000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pichau/Desktop/ARM Sicle Cycle/pc_logic - Testbench/tb_pc_logic.vhd|
+Z18 !s107 C:/Users/Pichau/Desktop/ARM Sicle Cycle/pc_logic - Testbench/tb_pc_logic.vhd|
+R11
+R12
+Ateste
+R2
+R3
+DEx4 work 11 tb_pc_logic 0 22 77U@oNnJXlM92R9A3DUNV3
+l27
+L7
+VT^I5=QUb8zJV4O`^MCXIP1
+!s100 RVV>:UK@>583E1J@j?>Tf3
+R7
+31
+!i10b 1
+R16
+R17
+R18
+R11
+R12

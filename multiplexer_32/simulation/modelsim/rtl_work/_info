@@ -1,0 +1,75 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Pichau\Desktop\ARM Sicle Cycle\multiplexer_32 - Testbench\simulation\modelsim
+Emux32
+Z1 w1615433644
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\Pichau\Desktop\ARM Sicle Cycle\multiplexer_32 - Testbench\simulation\modelsim
+Z5 8C:/Users/Pichau/Desktop/ARM Sicle Cycle/multiplexer_32 - Testbench/mux32.vhd
+Z6 FC:/Users/Pichau/Desktop/ARM Sicle Cycle/multiplexer_32 - Testbench/mux32.vhd
+l0
+L7
+VhZ4FWZKmOJKL<`^CX1M<n1
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1615593747.736000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pichau/Desktop/ARM Sicle Cycle/multiplexer_32 - Testbench/mux32.vhd|
+Z10 !s107 C:/Users/Pichau/Desktop/ARM Sicle Cycle/multiplexer_32 - Testbench/mux32.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 j]mnBgnK6[j7FaP]04mo70
+!i10b 1
+Abehavior
+R2
+R3
+DEx4 work 5 mux32 0 22 hZ4FWZKmOJKL<`^CX1M<n1
+l17
+L16
+VlMJkAj7mDFFHT=mazdnUj3
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 lM2R:o<JIZ6ko22nV4fiN0
+!i10b 1
+Etb_multiplexer
+Z13 w1615571567
+R2
+R3
+R4
+Z14 8C:/Users/Pichau/Desktop/ARM Sicle Cycle/multiplexer_32 - Testbench/tb_Multiplexer.vhd
+Z15 FC:/Users/Pichau/Desktop/ARM Sicle Cycle/multiplexer_32 - Testbench/tb_Multiplexer.vhd
+l0
+L4
+VmFOF2fQX]f8o9j;A8meMd2
+!s100 jaPSc2lNMoYX6L>K`DTeC0
+R7
+31
+!i10b 1
+Z16 !s108 1615593747.937000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pichau/Desktop/ARM Sicle Cycle/multiplexer_32 - Testbench/tb_Multiplexer.vhd|
+Z18 !s107 C:/Users/Pichau/Desktop/ARM Sicle Cycle/multiplexer_32 - Testbench/tb_Multiplexer.vhd|
+R11
+R12
+Abehavior
+R2
+R3
+DEx4 work 14 tb_multiplexer 0 22 mFOF2fQX]f8o9j;A8meMd2
+l27
+L7
+V?ZilCD7lTzBbS67V31JBN0
+!s100 IQJc^0d`7E7fZ7nOndoK90
+R7
+31
+!i10b 1
+R16
+R17
+R18
+R11
+R12

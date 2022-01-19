@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Pichau/Desktop/ARM Sicle Cycle/pc_logic/tb_pc_logic.vhd
+source_file = 1, C:/Users/Pichau/Desktop/ARM Sicle Cycle/pc_logic/pc_logic.vhd
+source_file = 1, C:/Users/Pichau/Desktop/ARM Sicle Cycle/pc_logic/db/pc_logic.cbx.xml
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = pc_logic
+instance = comp, \Branch~I\, Branch, pc_logic, 1
+instance = comp, \RegW~I\, RegW, pc_logic, 1
+instance = comp, \RD[0]~I\, RD[0], pc_logic, 1
+instance = comp, \aux~0\, aux~0, pc_logic, 1
+instance = comp, \RD[1]~I\, RD[1], pc_logic, 1
+instance = comp, \RD[2]~I\, RD[2], pc_logic, 1
+instance = comp, \RD[3]~I\, RD[3], pc_logic, 1
+instance = comp, \PCS~I\, PCS, pc_logic, 1

@@ -1,0 +1,77 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Pichau\Desktop\ARM Sicle Cycle\adder - Testbench\simulation\modelsim
+Eadder
+Z1 w1615433996
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\Pichau\Desktop\ARM Sicle Cycle\adder - Testbench\simulation\modelsim
+Z6 8C:/Users/Pichau/Desktop/ARM Sicle Cycle/adder - Testbench/adder.vhd
+Z7 FC:/Users/Pichau/Desktop/ARM Sicle Cycle/adder - Testbench/adder.vhd
+l0
+L9
+V8cA:_]m2@fhiajijZIAmW3
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1615591818.773000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pichau/Desktop/ARM Sicle Cycle/adder - Testbench/adder.vhd|
+Z11 !s107 C:/Users/Pichau/Desktop/ARM Sicle Cycle/adder - Testbench/adder.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 h1[lP:I3cJRK^iY=GokQN0
+!i10b 1
+Abehavior
+R2
+R3
+R4
+DEx4 work 5 adder 0 22 8cA:_]m2@fhiajijZIAmW3
+l18
+L17
+V1Tah02IGHEJ4G3bR02^1I1
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 1VGL5_[iF?6J^5ACbM60N0
+!i10b 1
+Etb_adder
+Z14 w1615517926
+R3
+R4
+R5
+Z15 8C:/Users/Pichau/Desktop/ARM Sicle Cycle/adder - Testbench/tb_adder.vhd
+Z16 FC:/Users/Pichau/Desktop/ARM Sicle Cycle/adder - Testbench/tb_adder.vhd
+l0
+L4
+VeBll`A3`Dz@>oRU@^W<c00
+!s100 lY9Pb[Nm_V^D43]ZGYMMT3
+R8
+31
+!i10b 1
+Z17 !s108 1615591818.961000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pichau/Desktop/ARM Sicle Cycle/adder - Testbench/tb_adder.vhd|
+Z19 !s107 C:/Users/Pichau/Desktop/ARM Sicle Cycle/adder - Testbench/tb_adder.vhd|
+R12
+R13
+Abehavior
+R3
+R4
+DEx4 work 8 tb_adder 0 22 eBll`A3`Dz@>oRU@^W<c00
+l26
+L7
+VSj[[UR3iRQ0QB>ATom_HJ3
+!s100 1OUTiglL`H;oWbZ6i[Mm<2
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13
